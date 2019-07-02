@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- HEADER -->
     <header>
         <!-- MENU-HEADER -->
         <div>
@@ -25,7 +26,7 @@
                 <nav>
                     <ul>
                         <li>
-                            <a href="#">find a hotel</a><span></span>
+                            <a href="#">find a hotel <i class="fas fa-angle-down"></i></a>
                             <ul>
                                 <li><a href="#">Melbourne City (CBD)</a></li>
                                 <li><a href="#">Melbourne Inner Suburbs</a></li>
@@ -44,8 +45,60 @@
                         <a href="#"><i class="fas fa-bars"></i></a>
                     </div>   
                 </nav>
+                <div>
+                        <a href="#"><i class="far fa-bookmark"></i>book now</a>
+                </div>
             </div>
         </div>
-    </header>   
+        <!-- END / MENU-HEADER -->
+    </header>
+    <!-- END-HEADER -->
+    <!-- SLIDER -->
+    <div>
+        <div>
+            <div>
+                <img src="image/slide_1.jpg" alt="slide 1">
+                <div>
+                    <h2>Long Stay</h2>
+                    <p>staying longer than 28 nights?</p>
+                    <a href="#">Enquire Now</a>
+                </div>
+            </div>
+            <div>
+                <img src="image/slide_2.jpg" alt="slide 2">
+                <div>
+                    <h2>Punthill Rewards Program</h2>
+                    <p>Exclusive deals available only to members.</p>
+                    <a href="#">Free Sign Up</a>
+                </div>
+            </div>
+            <div>
+                <img src="image/slide_3.jpg" alt="slide 3">
+                <div>
+                    <h2>Explore Melbourne</h2>
+                    <p>Melbourne CBD - South Yarra - Outer Melbourne</p>
+                    <a href="#">View Hotel</a>
+                </div>
+            </div>
+            <div>
+                <img src="image/slide_4.jpg" alt="slide 4">
+                <div>
+                    <h2>Deal of the day</h2>
+                    <p>Stay 2 save 30% </p>
+                    <a href="#">View Deal</a>
+                </div>
+            </div>
+            <div>
+                
+            </div>          
+        </div>
+        <div>
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <div class="vertical-line"></div>
+        </div>
+    </div>
+    <!-- END-SLIDER -->
 </body>
 </html>
