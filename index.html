@@ -54,7 +54,7 @@
     </header>
     <!-- END-HEADER -->
     <!-- SLIDER -->
-    <div>
+    <section>
         <div>
             <div>
                 <img src="image/slide_1.jpg" alt="slide 1">
@@ -98,7 +98,244 @@
             <span class="dot" onclick="currentSlide(3)"></span>
             <div class="vertical-line"></div>
         </div>
-    </div>
+        <div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </section>
     <!-- END-SLIDER -->
+    <!-- BOOKING-FORM -->
+    <section>
+        <form action="index.html">
+            <div>
+                <label>check-in</label>
+                <input type="hidden" name="checkin" id="checkin" value="2019-12-06">
+                <div>
+                    <h4>06</h4>
+                    <p>december, 2019</p>
+                    <p>Friday</p>
+                </div>
+                <a href="#"><i class="fas fa-sort"></i></a>
+            </div>
+            <div>
+                <label>check-out</label>
+                <input type="hidden" name="checkout" id="checkout" value="2019-12-23">
+                <div>
+                    <h4>23</h4>
+                    <p>december, 2019</p>
+                    <p>Monday</p>
+                </div>
+                <a href="#"><i class="fas fa-sort"></i></a>
+            </div>
+            <div>
+                <label>where</label>
+                <span><i class="fas fa-map-marker-alt"></i></span>
+                <select id="location" name="location">
+                    <option value="" disabled selected>Select Hotel</option>
+                    <option value="finders-lane">Finders Lane (Mel CBD)</option>
+                    <option value="little-borke">Little Borke (Mel CBD)</option>
+                    <option value="manhattan">Manhattan (Mel CBD)</option>
+                    <option value="south-yarra">South Yarra Grand</option>
+                </select>
+            </div>
+            <div>
+                <button type="submit">
+                    <span><i class="far fa-check-circle"></i></span>
+                    check<br>availability</button>
+            </div>      
+        </form>
+    </section>
+    <!-- END-BOOKING-FORM -->
+    <!-- ABOUT -->
+    <section>
+        <div>
+            <div>
+                <div>
+                    <h6>about</h6>
+                    <div class="horizontal-line"></div>
+                </div>
+                <h2>Punthill Apartment Hotels in Melbourne & Brisbane</h2>
+                <p>Punthill Apartment Hotels offer stylish and spacious Brisbane and Melbourne accommodation apartments in 14 unrivalled locations, conveniently-located in prime areas throughout Melbourne and Brisbane.</p>
+                <p>Whether travelling for business or leisure you’ll feel right at home in our great range of accommodation including Studio, One, Two and Three Bedroom Apartments.</p>
+                <p>Our apartments in Melbourne and Brisbane are fully self-contained with cooking facilities and spacious living areas that make extended stays even more comfortable and economical.</p>
+                <p>Punthill has 4 Melbourne CBD locations which provide the perfect base for exploring Melbourne’s cosmopolitan cafes, boutique shopping, galleries, clubs and bars.</p>
+                <a href="">more details</a>
+            </div>
+            <div>
+                <div>
+                    <img src="image/about-img-1.jpg" alt="about-img1">
+                    <div>
+                        <img src="image/about-img-2.jpg" alt="about-img2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END-ABOUT -->
+    <!-- FEATURES -->
+    <section>
+        <div>
+            <div>
+                <div>
+                    <h3>Rewards</h3>
+                    <img src="image/about-rewards.jpg" alt="about-rewards">	
+                    <div>
+                        <img src="image/about-reward-icon.svg" alt="rewards-icon">
+                        <h3>Rewards</h3>
+                        <p>Sign up for FREE to the Punthill Rewards Program and enjoy great perks and exclusive deals available only to members.</p>
+                        <a href="#">more details</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <h3>Meeting & events</h3>
+                    <img src="image/about-meeting.jpg" alt="about-meeting">	
+                    <div>
+                        <img src="image/about-meeting-icon.svg" alt="meeting-icon">
+                        <h3>Meeting & events</h3>
+                        <p>Punthill’s Conference Venues in Melbourne and Brisbane offer contemporary facilities suitable for holding conferences, meeting workshops and functions.</p>
+                        <a href="#">more details</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <h3>Long stays</h3>
+                    <img src="image/about-longstay.jpg" alt="about-stay">	
+                    <div>
+                        <img src="image/about-stay-icon.svg" alt="stay-icon">
+                        <h3>Long Stays</h3>
+                        <p>Punthill have an extensive range of fully furnished serviced apartments in and around Melbourne CBD and Brisbane suitable for long-term stays.</p>
+                        <a href="#">more details</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <h3>Specials</h3>
+                    <img src="image/about-special.jpg" alt="about-special">	
+                    <div>
+                        <img src="image/about-gift-icon.svg" alt="special-icon">
+                        <h3>Specials</h3>
+                        <p>Take advantage of great specials from Punthill</p>
+                        <a href="#">more details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END FEATURES -->
+    <!-- NEWS -->
+    <section>
+        <div>
+            <div>
+                <div>
+                    <h6>news</h6>
+                    <div class="horizontal-line"></div>
+                </div>
+                <div>
+                    <div>
+                        <div>
+                            <img src="image/news1.jpg" alt="news1">
+                        </div>
+                        <div>
+                            <h6>august 6, 2019 </h6>
+                            <h5>How to Get Our Cheapest Accommodation Rates</h5>
+                            <p>While every stay at Punthill Apartment Hotels provides excellent value, there’s nothing wrong with trying to get the</p>
+                            <h6><span>by</span>jont knork</h6>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="image/news2.jpg" alt="news2">
+                        </div>
+                        <div>
+                            <h6>august 2, 2019 </h6>
+                            <h5>12 Things You Must Do in Melbourne and Brisbane</h5>
+                            <p>While every stay at Punthill Apartment Hotels provides excellent value, there’s nothing wrong with trying to get the</p>
+                            <h6><span>by</span>keira black</h6>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="image/news3.jpg" alt="news3">
+                        </div>
+                        <div>
+                            <h6>august 1, 2019 </h6>
+                            <h5>How to Get the Most Out of Your Melbourne Business Trip</h5>
+                            <p>While every stay at Punthill Apartment Hotels provides excellent value, there’s nothing wrong with trying to get the</p>
+                            <h6><span>by</span>jont knork</h6>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END-NEWS -->
+    <!-- BANNER -->
+    <section>
+        <div>
+            
+            <img src="image/veriu-banner.jpg" alt="veriu-banner">
+            <div>
+                <h1>Travelling to Sydney?</h1>
+                <p>We have created a bespoke collection of hotels & suites, each with its own distinct personality and style. All different – and yet all the same in their commitment to providing you with the very best service, an enviable location and at the end of the day, a great night’s sleep.</p>
+                <a href="#">take me there</a>
+            </div>
+            <div>
+                <img src="image/veriu-logo.png" alt="veriu-logo">
+            </div>
+        </div>
+    </section>
+    <!-- END-BANNER -->
+    <!-- FOOTER-->
+    <footer>
+        <div>
+            <div>
+                <img src="image/punthill-logo-footer.jpg" alt="logo-footer">
+                <div>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+                <div>
+                    <ul>
+                        <li><a href="#">find a hotel</a></li>
+                        <li><a href="#">corporate</a></li>
+                        <li><a href="#">meetings & events</a></li>
+                        <li><a href="#">long stay</a></li>
+                        <li><a href="#">rewards</a></li>
+                        <li><a href="#">specials</a></li>
+                        <li><a href="#">blog</a></li>
+                        <li><a href="#">contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <ul>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Coporate Travel Program</a></li>
+                        <li><a href="#">Best Price Guarantee</a></li>
+                    </ul>
+                    <p> &copy; 2019 Punthill Apartment Hotels</p>
+                </div>
+                <div>
+                    <h6>newsletter</h6>
+                    <div>
+                        <input type="email" name="newsletter" value="Enter your email">
+                        <button type="submit">
+                                <span><i class="far fa-paper-plane"></i></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END-FOOTER--> 
 </body>
 </html>
