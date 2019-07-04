@@ -1,1 +1,232 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+* {
+	box-sizing: border-box;
+}
+body {
+	font: 1em/1.5 'Lato', sans-serif;
+	color: #514445;
+	background: #ffffff;;
+    margin: 0;
+}
+p {
+	font-size: .875em;
+	line-height: 1.4;
+	margin: 0;
+}
+a {
+    text-decoration: none;
+}
+h1,
+h3,
+h6,
+h4,
+h5,
+.btn,
+nav a,
+.navTypo {
+    text-transform: uppercase;
+}
+h1,
+h2,
+h3,
+h4,
+.bannerAd,
+.navTypo  {
+    color: #fff;
+}
+h1 {
+    font-size: 4.375em;
+    line-height:0;
+    letter-spacing: .15em;
+    margin-top: 0 em;
+    font-weight: 700;
+}
+h2 {
+    font-size: 3.125em;
+    line-height: 3em;
+}
+h3 {
+    font-size: 2.5em;
+    line-height: 2.3em;
+    color:#352c2d;
+    font-weight: 700;
+}
+h4 {
+    font-size: 1.5em;
+    line-height: 0;
+    margin: 0;
+    font-weight: 300;
+    letter-spacing: .1em;
+    padding-bottom: 3em;
+}
+h5 {
+    font-size: 1em;
+    line-height: 1.1em;
+    font-weight: 700;
+}
+h6 {
+    font-size: 0.8125em;
+    line-height: 0.7em;
+}
 
+/* ================================= 
+  Base Layout Styles
+==================================== */
+.navHeader {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.slider {
+    position: relative;
+    z-index: -1;
+}
+
+
+
+
+/* ================================= 
+  Page Elements
+==================================== */
+/* ---- Header Nav ---- */
+.borderNav {
+    border-bottom: 1px solid #fff;
+    height: 100px;
+}
+.logoHeader {
+    height: 68px;
+    display: inline-block;
+}
+.logoContainer {
+    margin: 2em;
+}
+.navTypo {
+    font-size: 0.875em;
+    font-weight: 700;
+}
+.numberPhone {
+    padding-left: 5px;
+    font-weight: 300;
+}
+.dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+nav li {
+    list-style-type: none;
+    display: inline;
+    padding-right: 2rem;
+}
+nav li i {
+    padding-left: 5px;
+}
+nav a {
+    list-style-type: none;
+    display: inline;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.875em;
+    font-weight: 400;
+}
+nav a:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+.navMobile {
+    display: none;
+}
+
+/* ---- Slider ---- */
+.mySliders {
+    display: none;
+}
+.slideImg {
+    width: 100%;
+}
+.slideContainer {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+.slideCaption {
+    position: absolute;
+    top:38%;
+    text-align: center;
+    width:100%;
+    
+}
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 24px 0;
+    background-color:#868080;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+    background-color: #fff;
+    box-shadow: 0 0 10px #f67f21;
+
+}
+.verLine {
+    border-right: 1px solid #fff;
+    height: 350px;
+    width: 8px;
+}
+.dotContainer {
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+}
+.prev,
+.next {
+    display:none;
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    color: white;
+    font-size: 2em;
+    transition: 0.6s ease;
+    user-select: none;
+}
+.prev {
+    content:"/f053";
+    padding-left: 2em;
+}
+.next {
+    content:"/f054";
+    right: 0;
+    padding-right: 2em;
+}
+.prev:hover,
+.next:hover {
+    opacity: .5;
+}
+/* ---- Button ---- */
+.btn {
+    border-radius: 2em;
+    background-color: #fff;
+    text-align: center;
+    padding: 1.1em 2.2em;
+    color: #514445;
+    transition: background-color 0.6s ease;
+    
+}
+.btn:hover {
+    background-color:#d6d6d6;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */

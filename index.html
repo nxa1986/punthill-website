@@ -15,19 +15,19 @@
     <!-- HEADER -->
     <header>
         <!-- MENU-HEADER -->
-        <div>
-            <div>
-                <div>
-                    <a href="#"><img src="image/punthill-logo-header.png" alt="punhill-logo"></a>
+        <div class="navHeader" >
+            <div clas="borderNav">
+                <div class="logoContainer">
+                    <a href="#"><img class="logoHeader" src="image/punthill-logo-header.png" alt="punhill-logo"></a>
                 </div>
                 <div>
-                    <p>call us now:<span>1300 964 821</span></p>
+                    <p class="navTypo">call us now:<span class="numberPhone">1300 964 821</span></p>
                 </div>
                 <nav>
                     <ul>
                         <li>
                             <a href="#">find a hotel <i class="fas fa-angle-down"></i></a>
-                            <ul>
+                            <ul class="dropdownContent">
                                 <li><a href="#">Melbourne City (CBD)</a></li>
                                 <li><a href="#">Melbourne Inner Suburbs</a></li>
                                 <li><a href="#">Melbourne Suburbs</a></li>
@@ -41,12 +41,12 @@
                         <li><a href="#">long stay</a></li>
                         <li><a href="#">contact</a></li>   
                     </ul>
-                    <div>
+                    <div class="navMobile">
                         <a href="#"><i class="fas fa-bars"></i></a>
                     </div>   
                 </nav>
                 <div>
-                        <a href="#"><i class="far fa-bookmark"></i>book now</a>
+                        <a class="btnBook" href="#"><i class="far fa-bookmark"></i>book now</a>
                 </div>
             </div>
         </div>
@@ -54,81 +54,82 @@
     </header>
     <!-- END-HEADER -->
     <!-- SLIDER -->
-    <section>
-        <div>
-            <div>
-                <img src="image/slide_1.jpg" alt="slide 1">
-                <div>
-                    <h2>Long Stay</h2>
-                    <p>staying longer than 28 nights?</p>
-                    <a href="#">Enquire Now</a>
+    <section class="slider">
+        <div class="slideContainer">
+            <div class="mySlides fade">
+                <img class="slideImg" src="image/slide_1.jpg" alt="slide 1">
+                <div class="slideCaption">
+                    <h1>Long Stay</h1>
+                    <h4>staying longer than 28 nights?</h4>
+                    <a class="btn" href="#">Enquire Now</a>
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <img class="slideImg" src="image/slide_2.jpg" alt="slide 2">
+                <div class="slideCaption">
+                    <h1>Rewards Program</h1>
+                    <h4>Exclusive deals available only to members</h4>
+                    <a class="btn" href="#">Free Sign Up</a>
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <img class="slideImg" src="image/slide_3.jpg" alt="slide 3">
+                <div class="slideCaption">
+                    <h1>Explore Melbourne</h1>
+                    <h4>Melbourne CBD - South Yarra - Outer Melbourne</h4>
+                    <a class="btn" href="#">View Hotel</a>
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <img class="slideImg" src="image/slide_4.jpg" alt="slide 4">
+                <div class="slideCaption">
+                    <h1>daily deal</h1>
+                    <h4>Stay 2 save 30% </h4>
+                    <a class="btn" href="#">View Deal</a>
                 </div>
             </div>
             <div>
-                <img src="image/slide_2.jpg" alt="slide 2">
-                <div>
-                    <h2>Punthill Rewards Program</h2>
-                    <p>Exclusive deals available only to members.</p>
-                    <a href="#">Free Sign Up</a>
-                </div>
+            </div>
+            <div class="dotContainer">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <div class="verLine"></div>
             </div>
             <div>
-                <img src="image/slide_3.jpg" alt="slide 3">
-                <div>
-                    <h2>Explore Melbourne</h2>
-                    <p>Melbourne CBD - South Yarra - Outer Melbourne</p>
-                    <a href="#">View Hotel</a>
-                </div>
-            </div>
-            <div>
-                <img src="image/slide_4.jpg" alt="slide 4">
-                <div>
-                    <h2>Deal of the day</h2>
-                    <p>Stay 2 save 30% </p>
-                    <a href="#">View Deal</a>
-                </div>
-            </div>
-            <div>
-                
-            </div>          
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>         
         </div>
-        <div>
-            <span class="dot" onclick="currentSlide(1)"></span> 
-            <span class="dot" onclick="currentSlide(2)"></span> 
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <div class="vertical-line"></div>
-        </div>
-        <div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
+        
     </section>
     <!-- END-SLIDER -->
     <!-- BOOKING-FORM -->
     <section>
         <form action="index.html">
             <div>
-                <label>check-in</label>
+                <label class="upper-text">check-in</label>
                 <input type="hidden" name="checkin" id="checkin" value="2019-12-06">
                 <div>
-                    <h4>06</h4>
+                    <h3>06</h3>
                     <p>december, 2019</p>
                     <p>Friday</p>
                 </div>
                 <a href="#"><i class="fas fa-sort"></i></a>
             </div>
             <div>
-                <label>check-out</label>
+                <label class="upper-text">check-out</label>
                 <input type="hidden" name="checkout" id="checkout" value="2019-12-23">
                 <div>
-                    <h4>23</h4>
+                    <h3>23</h3>
                     <p>december, 2019</p>
                     <p>Monday</p>
                 </div>
                 <a href="#"><i class="fas fa-sort"></i></a>
             </div>
             <div>
-                <label>where</label>
+                <label class="upper-text">where</label>
                 <span><i class="fas fa-map-marker-alt"></i></span>
                 <select id="location" name="location">
                     <option value="" disabled selected>Select Hotel</option>
@@ -177,11 +178,11 @@
         <div>
             <div>
                 <div>
-                    <h3>Rewards</h3>
+                    <h4>Rewards</h4>
                     <img src="image/about-rewards.jpg" alt="about-rewards">	
                     <div>
                         <img src="image/about-reward-icon.svg" alt="rewards-icon">
-                        <h3>Rewards</h3>
+                        <h4>Rewards</h4>
                         <p>Sign up for FREE to the Punthill Rewards Program and enjoy great perks and exclusive deals available only to members.</p>
                         <a href="#">more details</a>
                     </div>
@@ -189,11 +190,11 @@
             </div>
             <div>
                 <div>
-                    <h3>Meeting & events</h3>
+                    <h4>Meeting & events</h4>
                     <img src="image/about-meeting.jpg" alt="about-meeting">	
                     <div>
                         <img src="image/about-meeting-icon.svg" alt="meeting-icon">
-                        <h3>Meeting & events</h3>
+                        <h4>Meeting & events</h4>
                         <p>Punthill’s Conference Venues in Melbourne and Brisbane offer contemporary facilities suitable for holding conferences, meeting workshops and functions.</p>
                         <a href="#">more details</a>
                     </div>
@@ -201,11 +202,11 @@
             </div>
             <div>
                 <div>
-                    <h3>Long stays</h3>
+                    <h4>Long stays</h4>
                     <img src="image/about-longstay.jpg" alt="about-stay">	
                     <div>
                         <img src="image/about-stay-icon.svg" alt="stay-icon">
-                        <h3>Long Stays</h3>
+                        <h4>Long Stays</h4>
                         <p>Punthill have an extensive range of fully furnished serviced apartments in and around Melbourne CBD and Brisbane suitable for long-term stays.</p>
                         <a href="#">more details</a>
                     </div>
@@ -213,11 +214,11 @@
             </div>
             <div>
                 <div>
-                    <h3>Specials</h3>
+                    <h4>Specials</h4>
                     <img src="image/about-special.jpg" alt="about-special">	
                     <div>
                         <img src="image/about-gift-icon.svg" alt="special-icon">
-                        <h3>Specials</h3>
+                        <h4>Specials</h4>
                         <p>Take advantage of great specials from Punthill</p>
                         <a href="#">more details</a>
                     </div>
@@ -241,7 +242,7 @@
                         </div>
                         <div>
                             <h6>august 6, 2019 </h6>
-                            <h5>How to Get Our Cheapest Accommodation Rates</h5>
+                            <a href="#">How to Get Our Cheapest Accommodation Rates</a>
                             <p>While every stay at Punthill Apartment Hotels provides excellent value, there’s nothing wrong with trying to get the</p>
                             <h6><span>by</span>jont knork</h6>
                         </div>
@@ -252,7 +253,7 @@
                         </div>
                         <div>
                             <h6>august 2, 2019 </h6>
-                            <h5>12 Things You Must Do in Melbourne and Brisbane</h5>
+                            <a href="#">12 Things You Must Do in Melbourne and Brisbane</a>
                             <p>While every stay at Punthill Apartment Hotels provides excellent value, there’s nothing wrong with trying to get the</p>
                             <h6><span>by</span>keira black</h6>
                         </div>
@@ -263,7 +264,7 @@
                         </div>
                         <div>
                             <h6>august 1, 2019 </h6>
-                            <h5>How to Get the Most Out of Your Melbourne Business Trip</h5>
+                            <a href="#">How to Get the Most Out of Your Melbourne Business Trip</a>
                             <p>While every stay at Punthill Apartment Hotels provides excellent value, there’s nothing wrong with trying to get the</p>
                             <h6><span>by</span>jont knork</h6>
                         </div>
@@ -302,7 +303,7 @@
                     <a href="#"><i class="fab fa-pinterest-p"></i></a>
                 </div>
                 <div>
-                    <ul>
+                    <ul class="upper-text">
                         <li><a href="#">find a hotel</a></li>
                         <li><a href="#">corporate</a></li>
                         <li><a href="#">meetings & events</a></li>
@@ -337,5 +338,7 @@
         </div>
     </footer>
     <!-- END-FOOTER--> 
+    <!-- JAVASCRIPT-->
+    <script type="text/javascript" src="js/slider.js"></script>
 </body>
 </html>
