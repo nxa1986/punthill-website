@@ -25,7 +25,8 @@ h4,
 h5,
 .btn,
 nav a,
-.navTypo {
+.navTypo,
+.btnBook {
     text-transform: uppercase;
 }
 h1,
@@ -33,7 +34,8 @@ h2,
 h3,
 h4,
 .bannerAd,
-.navTypo  {
+.navTypo,
+.btnBook {
     color: #fff;
 }
 h1 {
@@ -74,35 +76,45 @@ h6 {
 /* ================================= 
   Base Layout Styles
 ==================================== */
+/* ---- Header Nav ---- */
 .navHeader {
     position: absolute;
     top: 0;
     width: 100%;
+    z-index: 3;
+}
+.leftHeader {
+    float: left;
+    width: 30%;
+    height: 100px;
+}
+.rightHeader {
+    float: left;
+    text-align: right; 
+    width: 70%;
 }
 .slider {
     position: relative;
-    z-index: -1;
 }
-
-
-
 
 /* ================================= 
   Page Elements
 ==================================== */
 /* ---- Header Nav ---- */
 .borderNav {
-    border-bottom: 1px solid #fff;
+    position: relative;
     height: 100px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 .logoHeader {
-    height: 68px;
-    display: inline-block;
-}
-.logoContainer {
-    margin: 2em;
+    height: 60px;
+    margin-top: 20px;
+    margin-left: 80px;
+    margin-right: 50px;
 }
 .navTypo {
+    position: absolute;
+    top: 45%;
     font-size: 0.875em;
     font-weight: 700;
 }
@@ -161,23 +173,24 @@ nav a:hover {
     top:38%;
     text-align: center;
     width:100%;
-    
 }
 .dot {
     cursor: pointer;
     height: 12px;
     width: 12px;
     margin: 24px 0;
-    background-color:#868080;
+    background-color:rgba(255, 255, 255, 0.5);
     border-radius: 50%;
     display: flex;
     flex-direction: column;
     transition: background-color 0.6s ease;
 }
-.active, .dot:hover {
+.dot:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.active {
     background-color: #fff;
     box-shadow: 0 0 10px #f67f21;
-
 }
 .verLine {
     border-right: 1px solid #fff;
@@ -226,7 +239,16 @@ nav a:hover {
 .btn:hover {
     background-color:#d6d6d6;
 }
-
-/* ================================= 
-  Media Queries
-==================================== */
+.btnBook i {
+    margin-right: .7em;
+    color: #f67f21;   
+}
+.btnBook:hover {
+    opacity: .8;
+}
+/* ---- Clearfix ---- */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
