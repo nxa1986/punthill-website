@@ -89,10 +89,20 @@ h5 {
 .rightHeader {
     width: 70%;
 }
+
+/* ---- Slider ---- */
 .slider {
     position: relative;
 }
 
+/* ---- Form ---- */
+.containerForm {
+    width: 1170px;
+    position: absolute;
+    top: 780px;
+    left: 370px;
+    z-index: 3;
+}
 /* ================================= 
   Page Elements
 ==================================== */
@@ -332,18 +342,29 @@ select.selectIcon {
 .checkin,
 .checkout,
 .location {
-    width: 30%;
+    width: 28%;
+}
+.location {
+    margin-left: 3.5em;
+}
+.checkout {
+    border-right: 1px solid rgba(0,0,0,0.2);
+    margin-left: 3.5em;
+}
+.checkin {
+    border-right: 1px solid rgba(0,0,0,0.2);
+    margin-left: 3em;
 }
 form {
-    max-width: 1170px;
     margin: auto;
     background-color: #fff;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 30px 0px rgba(0,0,0,0.2);
     height: 154px;
     display: flex;
 	flex-direction: row;
 	justify-content: center;
-	align-items: flex-start;
+    align-items: flex-start;
+    padding-top: 1.7em;
 }
 /* ---- Clearfix ---- */
 .clearFix::after {
