@@ -239,7 +239,7 @@ nav a:hover {
 .dotContainer {
     position: absolute;
     bottom: 0;
-    right: 10%;
+    right: 11.5%;
 }
 .prev,
 .next {
@@ -310,7 +310,7 @@ select {
     background: transparent;
     border: none;
     color:#352c2d;
-    width: 10%;
+    width: 12em;
     text-transform: uppercase;
     outline: none;
     margin: 0;      
@@ -323,11 +323,27 @@ select {
 select.selectIcon {
     background: url(../image/where-icon.png);
     background-repeat: no-repeat;
-    background-position: 95% 50%;
+    background-position: 95% 55%;
 }
 .containerSelect {
     padding-top: 2.3em;
     padding-left: 2.5em;
+}
+.checkin,
+.checkout,
+.location {
+    width: 30%;
+}
+form {
+    max-width: 1170px;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    height: 154px;
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
 }
 /* ---- Clearfix ---- */
 .clearFix::after {
