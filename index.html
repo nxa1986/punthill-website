@@ -7,39 +7,49 @@
     <title>Punthill Homepage</title>
     <!--CSS LIBRARY-->
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome-all.min.css">
-    <!-- GOOGLE FONT -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/animation.css">
+    <link rel="stylesheet" type="text/css" href="css/media-queries.css">
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 <body>
     <!-- HEADER -->
     <header>
         <!-- MENU-HEADER -->
-        <div class="navHeader" >
-            <div class="borderNav">
+        <div class="navHeader" id="menuHeader">
+            <div class="navBorder">
                 <div class="leftHeader">
-                    <a href="#"><img class="logoHeader" src="image/punthill-logo-header.png" alt="punhill-logo"></a>
-                    <div><span class="navTypo">call us now:<span class="numberPhone">1300 964 821</span></span></div>
+                    <div class="containerLogo">
+                        <a href="#"><img class="logoHeader" src="image/punthill-logo-header.png" alt="punhill-logo"></a>
+                    </div>
+                    <div class="containerPhone">
+                        call us now:<span class="numberPhone">1300 964 821</span>
+                    </div>
                 </div>
-                <nav class="rightHeader clearfix">
-                    <ul>
-                        <li>
-                            <a href="#">find a hotel <i class="fas fa-angle-down"></i></a>
-                            <ul class="dropdownContent">
-                                <li><a href="#">Melbourne City (CBD)</a></li>
-                                <li><a href="#">Melbourne Inner Suburbs</a></li>
-                                <li><a href="#">Melbourne Suburbs</a></li>
-                                <li><a href="#">Brisbane</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">groups</a></li>
-                        <li><a href="#">corporate</a></li>
-                        <li><a href="#">meetings & events</a></li>
-                        <li><a href="#">rewards</a></li>
-                        <li><a href="#">long stay</a></li>
-                        <li><a href="#">contact</a></li>   
-                        <li><a class="btnBook" href="#"><i class="far fa-bookmark"></i>book now</a></li>
-                    </ul>  
+                <nav class="rightHeader clearFix">
+                    <div class="containerNav">
+                        <ul>
+                            <li class="dropdownNav">
+                                <a href="#">find a hotel <i class="fas fa-angle-down"></i></a>
+                                <ul class="dropdownContent">
+                                    <li><a href="#">Melbourne City (CBD)</a></li>
+                                    <li><a href="#">Melbourne Inner Suburbs</a></li>
+                                    <li><a href="#">Melbourne Suburbs</a></li>
+                                    <li><a href="#">Brisbane</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">groups</a></li>
+                            <li><a href="#">corporate</a></li>
+                            <li><a href="#">meetings & events</a></li>
+                            <li><a href="#">rewards</a></li>
+                            <li><a href="#">long stay</a></li>
+                            <li><a href="#">contact</a></li>
+                        </ul>
+                    </div>
+                    <div  class="containerBtn">
+                        <a class="btnBook" href="#"><i class="far fa-bookmark"></i>book now</a>
+                    </div>
                     <div class="navMobile">
                         <a href="#"><i class="fas fa-bars"></i></a>
                     </div> 
@@ -52,7 +62,7 @@
     <!-- SLIDER -->
     <section class="slider">
         <div class="slideContainer">
-            <div class="mySlides fade">
+            <div class="bannerSlider fade">
                 <img class="slideImg" src="image/slide_1.jpg" alt="slide 1">
                 <div class="slideCaption">
                     <h1>Long Stay</h1>
@@ -60,7 +70,7 @@
                     <a class="btn" href="#">Enquire Now</a>
                 </div>
             </div>
-            <div class="mySlides fade">
+            <div class="bannerSlider fade">
                 <img class="slideImg" src="image/slide_2.jpg" alt="slide 2">
                 <div class="slideCaption">
                     <h1>Rewards Program</h1>
@@ -68,7 +78,7 @@
                     <a class="btn" href="#">Free Sign Up</a>
                 </div>
             </div>
-            <div class="mySlides fade">
+            <div class="bannerSlider fade">
                 <img class="slideImg" src="image/slide_3.jpg" alt="slide 3">
                 <div class="slideCaption">
                     <h1>Explore Melbourne</h1>
@@ -76,7 +86,7 @@
                     <a class="btn" href="#">View Hotel</a>
                 </div>
             </div>
-            <div class="mySlides fade">
+            <div class="bannerSlider fade">
                 <img class="slideImg" src="image/slide_4.jpg" alt="slide 4">
                 <div class="slideCaption">
                     <h1>daily deal</h1>
@@ -103,36 +113,48 @@
     <!-- BOOKING-FORM -->
     <section>
         <form action="index.html">
-            <div>
-                <label class="upper-text">check-in</label>
+            <div class="checkin">
+                <label class="upperText">check-in</label>
                 <input type="hidden" name="checkin" id="checkin" value="2019-12-06">
                 <div>
-                    <h3>06</h3>
-                    <p>december, 2019</p>
-                    <p>Friday</p>
+                    <h3 class="dateBook">06</h3>
+                    <div class="monthBook">
+                        <p class="upperText">december, 2019</p>
+                        <p class="orangeText">Friday</p>
+                    </div>
                 </div>
-                <a href="#"><i class="fas fa-sort"></i></a>
+                <div class="checkinIcon clearFix">
+                    <a href="#"><img src="image/sort-icon.png" alt="sort-icon"></a>
+                </div>
             </div>
             <div>
-                <label class="upper-text">check-out</label>
+                <label class="upperText">check-out</label>
                 <input type="hidden" name="checkout" id="checkout" value="2019-12-23">
                 <div>
-                    <h3>23</h3>
-                    <p>december, 2019</p>
-                    <p>Monday</p>
+                    <h3 class="dateBook">23</h3>
+                    <div class="monthBook">
+                        <p class="upperText">december, 2019</p>
+                        <p class="orangeText">Monday</p>
+                    </div>
                 </div>
-                <a href="#"><i class="fas fa-sort"></i></a>
+                <div  class="checkinIcon clearFix">
+                    <a href="#"><img src="image/sort-icon.png" alt="sort-icon"></a>
+                </div>
             </div>
             <div>
-                <label class="upper-text">where</label>
-                <span><i class="fas fa-map-marker-alt"></i></span>
-                <select id="location" name="location">
-                    <option value="" disabled selected>Select Hotel</option>
-                    <option value="finders-lane">Finders Lane (Mel CBD)</option>
-                    <option value="little-borke">Little Borke (Mel CBD)</option>
-                    <option value="manhattan">Manhattan (Mel CBD)</option>
-                    <option value="south-yarra">South Yarra Grand</option>
-                </select>
+                <label class="upperText">where</label><br>
+                <div class="locaSelect">
+                    <div class="whereIcon"><img src="image/pin-icon.png" alt="pin-icon"></div>
+                    <div class="containerSelect">                  
+                        <select class="selectIcon" id="location" name="location">
+                            <option value="" disabled selected>Select Hotel</option>
+                            <option value="finders-lane">Finders Lane (Mel CBD)</option>
+                            <option value="little-borke">Little Borke (Mel CBD)</option>
+                            <option value="manhattan">Manhattan (Mel CBD)</option>
+                            <option value="south-yarra">South Yarra Grand</option>
+                        </select>
+                    </div>                  
+                </div>
             </div>
             <div>
                 <button type="submit">
@@ -147,7 +169,7 @@
         <div>
             <div>
                 <div>
-                    <h6>about</h6>
+                    <h5>about</h5>
                     <div class="horizontal-line"></div>
                 </div>
                 <h2>Punthill Apartment Hotels in Melbourne & Brisbane</h2>
@@ -227,7 +249,7 @@
         <div>
             <div>
                 <div>
-                    <h6>news</h6>
+                    <h5>news</h5>
                     <div class="horizontal-line"></div>
                 </div>
                 <div>
@@ -236,10 +258,10 @@
                             <img src="image/news1.jpg" alt="news1">
                         </div>
                         <div>
-                            <h6>august 6, 2019 </h6>
+                            <h5>august 6, 2019 </h5>
                             <a href="#">How to Get Our Cheapest Accommodation Rates</a>
                             <p>While every stay at Punthill Apartment Hotels provides excellent value, there’s nothing wrong with trying to get the</p>
-                            <h6><span>by</span>jont knork</h6>
+                            <h5><span>by</span>jont knork</h5>
                         </div>
                     </div>
                     <div>
@@ -247,10 +269,10 @@
                             <img src="image/news2.jpg" alt="news2">
                         </div>
                         <div>
-                            <h6>august 2, 2019 </h6>
+                            <h5>august 2, 2019 </h5>
                             <a href="#">12 Things You Must Do in Melbourne and Brisbane</a>
                             <p>While every stay at Punthill Apartment Hotels provides excellent value, there’s nothing wrong with trying to get the</p>
-                            <h6><span>by</span>keira black</h6>
+                            <h5><span>by</span>keira black</h5>
                         </div>
                     </div>
                     <div>
@@ -258,10 +280,10 @@
                             <img src="image/news3.jpg" alt="news3">
                         </div>
                         <div>
-                            <h6>august 1, 2019 </h6>
+                            <h5>august 1, 2019 </h5>
                             <a href="#">How to Get the Most Out of Your Melbourne Business Trip</a>
                             <p>While every stay at Punthill Apartment Hotels provides excellent value, there’s nothing wrong with trying to get the</p>
-                            <h6><span>by</span>jont knork</h6>
+                            <h5><span>by</span>jont knork</h5>
                         </div>
                      </div>
                 </div>
@@ -321,7 +343,7 @@
                     <p> &copy; 2019 Punthill Apartment Hotels</p>
                 </div>
                 <div>
-                    <h6>newsletter</h6>
+                    <h5>newsletter</h5>
                     <div>
                         <input type="email" name="newsletter" value="Enter your email">
                         <button type="submit">
