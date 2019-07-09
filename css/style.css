@@ -80,13 +80,15 @@ h5 {
 }
 .leftHeader,
 .rightHeader {
-    float: left;
     height: inherit;
 }
 .leftHeader {
+    float: left;
     width: 30%;
 }
 .rightHeader {
+    float: right;
+    text-align: right;
     width: 70%;
 }
 
@@ -96,12 +98,16 @@ h5 {
 }
 
 /* ---- Form ---- */
+.bookingForm {
+    position: absolute;
+    bottom: -8%;
+    width: 100%;
+    z-index: 3;
+}
 .containerForm {
     width: 1170px;
-    position: absolute;
-    top: 780px;
-    left: 370px;
-    z-index: 3;
+    margin: auto;
+    position: relative;
 }
 /* ================================= 
   Page Elements
@@ -113,13 +119,24 @@ h5 {
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 .logoHeader {
+    display: inline-block;
     width: 6.875em;
 }
 .containerLogo,
-.containerPhone,
+.containerPhone {
+    float: left;
+}
 .containerNav,
 .containerBtn {
-    float: left;
+    display: inline-block;
+    padding-top: 2.5em;
+}
+.containerNav {
+    padding-right: 1.2em;
+}
+.containerBtn {
+    padding-right: 5em;
+    padding-left: 2.6em;
 }
 .containerNav,
 .containerLogo {
@@ -128,12 +145,6 @@ h5 {
 }
 .containerLogo {
     padding: 1.25em 3.125em 0 5em;
-}
-.containerNav {
-    padding: 2.5em 1.2em 0 15em;
-}
-.containerBtn {
-    padding: 2.5em 1.25em 0 2.5em;
 }
 .containerPhone {
     padding: 2.9em 0 0 3.125em;
@@ -166,8 +177,9 @@ h5 {
     text-decoration: none;
     display: block;
     color: #352c2d;
+    text-align: left;
 }
-.orangeText,
+.monthBook p:nth-child(2),
 .dropdownContent a:hover {
     color: #f67f21;
 }
@@ -290,37 +302,59 @@ nav a:hover {
 }
 .btnBook i {
     margin-right: .7em;
-    color: #f67f21;   
+    color: #f67f21; 
 }
 .btnBook:hover {
     opacity: .8;
 }
-
+.submitBtn {
+    cursor: pointer;
+    background-color: #f67f21;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    height: 154px;
+    width: 230px;
+    margin: auto;
+    position: absolute;
+    right: 0;
+}
+.submitBtnIcon {
+    font-size: 2.7em;
+    opacity: .4;
+}
+.submitBtnText {
+    text-align: left;
+    display: inline-block;
+    padding-left: 1em;
+}
+.submitBtnText > p {
+    padding-bottom: .2em;
+}
 /* ---- Booking Form ---- */
 .dateBook,
-.monthBook {
-    float:left;
+.monthBook,
+.whereIcon {
+    float: left;
 }
 .monthBook {
     padding: 1.3em 3em 0 1em;
 }
 .checkinIcon {
-    padding: 1.7em 3em 0 1em;
-}
-.checkinIcon a:hover {
-    opacity: .7;
+    padding-top: 1.5em;
 }
 .whereIcon {
     padding-top: 1rem;
-    float:left;
-    bottom: 0;
 }
 select {
+    cursor: pointer;
     font-size: 0.8125em;
     background: transparent;
     border: none;
     color:#352c2d;
-    width: 12em;
+    width: 15em;
     text-transform: uppercase;
     outline: none;
     margin: 0;      
@@ -342,29 +376,27 @@ select.selectIcon {
 .checkin,
 .checkout,
 .location {
-    width: 28%;
+    width: 24%;
+    margin-top: 1.6em;
 }
 .location {
-    margin-left: 3.5em;
+    margin-left: 2.5em;
 }
 .checkout {
     border-right: 1px solid rgba(0,0,0,0.2);
-    margin-left: 3.5em;
+    margin-left: 2.5em;
 }
 .checkin {
     border-right: 1px solid rgba(0,0,0,0.2);
     margin-left: 3em;
 }
 form {
-    margin: auto;
     background-color: #fff;
     box-shadow: 0px 8px 30px 0px rgba(0,0,0,0.2);
     height: 154px;
     display: flex;
 	flex-direction: row;
-	justify-content: center;
     align-items: flex-start;
-    padding-top: 1.7em;
 }
 /* ---- Clearfix ---- */
 .clearFix::after {

@@ -9,8 +9,9 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/animation.css">
     <link rel="stylesheet" type="text/css" href="css/media-queries.css">
+    <link rel="stylesheet" type="text/css" href="css/zebra-datepicker.css">
     <!-- FONT -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i&amp;amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 <body>
@@ -41,13 +42,13 @@
                             </li>
                             <li><a href="#">groups</a></li>
                             <li><a href="#">corporate</a></li>
-                            <li><a href="#">meetings & events</a></li>
+                            <li><a href="#">meetings &amp;amp; events</a></li>
                             <li><a href="#">rewards</a></li>
                             <li><a href="#">long stay</a></li>
                             <li><a href="#">contact</a></li>
                         </ul>
                     </div>
-                    <div  class="containerBtn">
+                    <div class="containerBtn">
                         <a class="btnBook" href="#"><i class="far fa-bookmark"></i>book now</a>
                     </div>
                     <div class="navMobile">
@@ -104,66 +105,70 @@
                 <div class="verLine"></div>
             </div>
             <div>
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <a class="prev" onclick="plusSlides(-1)">&amp;amp;#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&amp;amp;#10095;</a>
             </div>         
-        </div>    
+        </div>
+         <!-- BOOKING-FORM -->
+        <div class="bookingForm">
+            <div class="containerForm">
+                <form action="index.html">
+                    <div class="checkin">
+                        <label class="upperText">check-in</label>
+                        <input type="hidden" name="checkin" id="checkin" value="2019-12-06">
+                        <div>
+                            <h3 class="dateBook">06</h3>
+                            <div class="monthBook">
+                                <p class="upperText">december, 2019</p>
+                                <p>Friday</p>
+                            </div>
+                        </div>
+                        <div class="checkinIcon clearFix">
+                            <a href="#"><img src="image/sort-icon.png" alt="sort-icon"></a>
+                        </div>
+                    </div>
+                    <div class="checkout">
+                        <label class="upperText">check-out</label>
+                        <input type="hidden" name="checkout" id="checkout" value="2019-12-23">
+                        <div>
+                            <h3 class="dateBook">23</h3>
+                            <div class="monthBook">
+                                <p class="upperText">december, 2019</p>
+                                <p class="orangeText">Monday</p>
+                            </div>
+                        </div>
+                        <div  class="checkinIcon clearFix">
+                            <a href="#"><img src="image/sort-icon.png" alt="sort-icon"></a>
+                        </div>
+                    </div>
+                    <div  class="location">
+                        <label class="upperText">where</label><br>
+                        <div class="locaSelect">
+                            <div class="whereIcon"><img src="image/pin-icon.png" alt="pin-icon"></div>
+                            <div class="containerSelect">                  
+                                <select class="selectIcon" id="location" name="location">
+                                    <option value="" disabled selected>Select Hotel</option>
+                                    <option value="finders-lane">Finders Lane (Mel CBD)</option>
+                                    <option value="little-borke">Little Borke (Mel CBD)</option>
+                                    <option value="manhattan">Manhattan (Mel CBD)</option>
+                                    <option value="south-yarra">South Yarra Grand</option>
+                                </select>
+                            </div>                  
+                        </div>
+                    </div>
+                    <button class="submitBtn" type="submit">
+                        <i class="far fa-check-circle submitBtnIcon"></i>
+                        <div class="submitBtnText">
+                            <p>check</p>
+                            <p>availability</p>
+                        </div>
+                    </button>  
+                </form>
+            </div>
+        </div>
+        <!-- END-BOOKING-FORM -->   
     </section>
     <!-- END-SLIDER -->
-    <!-- BOOKING-FORM -->
-    <section class="containerForm">
-        <form action="index.html">
-            <div class="checkin">
-                <label class="upperText">check-in</label>
-                <input type="hidden" name="checkin" id="checkin" value="2019-12-06">
-                <div>
-                    <h3 class="dateBook">06</h3>
-                    <div class="monthBook">
-                        <p class="upperText">december, 2019</p>
-                        <p class="orangeText">Friday</p>
-                    </div>
-                </div>
-                <div class="checkinIcon clearFix">
-                    <a href="#"><img src="image/sort-icon.png" alt="sort-icon"></a>
-                </div>
-            </div>
-            <div class="checkout">
-                <label class="upperText">check-out</label>
-                <input type="hidden" name="checkout" id="checkout" value="2019-12-23">
-                <div>
-                    <h3 class="dateBook">23</h3>
-                    <div class="monthBook">
-                        <p class="upperText">december, 2019</p>
-                        <p class="orangeText">Monday</p>
-                    </div>
-                </div>
-                <div  class="checkinIcon clearFix">
-                    <a href="#"><img src="image/sort-icon.png" alt="sort-icon"></a>
-                </div>
-            </div>
-            <div  class="location">
-                <label class="upperText">where</label><br>
-                <div class="locaSelect">
-                    <div class="whereIcon"><img src="image/pin-icon.png" alt="pin-icon"></div>
-                    <div class="containerSelect">                  
-                        <select class="selectIcon" id="location" name="location">
-                            <option value="" disabled selected>Select Hotel</option>
-                            <option value="finders-lane">Finders Lane (Mel CBD)</option>
-                            <option value="little-borke">Little Borke (Mel CBD)</option>
-                            <option value="manhattan">Manhattan (Mel CBD)</option>
-                            <option value="south-yarra">South Yarra Grand</option>
-                        </select>
-                    </div>                  
-                </div>
-            </div>
-            <div class="submitBnt clearFix">
-                <button type="submit">
-                    <span><i class="far fa-check-circle"></i></span>
-                    check<br>availability</button>
-            </div>      
-        </form>
-    </section>
-    <!-- END-BOOKING-FORM -->
     <!-- ABOUT -->
     <section>
         <div>
@@ -172,7 +177,7 @@
                     <h5>about</h5>
                     <div class="horizontal-line"></div>
                 </div>
-                <h2>Punthill Apartment Hotels in Melbourne & Brisbane</h2>
+                <h2>Punthill Apartment Hotels in Melbourne &amp;amp; Brisbane</h2>
                 <p>Punthill Apartment Hotels offer stylish and spacious Brisbane and Melbourne accommodation apartments in 14 unrivalled locations, conveniently-located in prime areas throughout Melbourne and Brisbane.</p>
                 <p>Whether travelling for business or leisure you’ll feel right at home in our great range of accommodation including Studio, One, Two and Three Bedroom Apartments.</p>
                 <p>Our apartments in Melbourne and Brisbane are fully self-contained with cooking facilities and spacious living areas that make extended stays even more comfortable and economical.</p>
@@ -207,11 +212,11 @@
             </div>
             <div>
                 <div>
-                    <h4>Meeting & events</h4>
+                    <h4>Meeting &amp;amp; events</h4>
                     <img src="image/about-meeting.jpg" alt="about-meeting">	
                     <div>
                         <img src="image/about-meeting-icon.svg" alt="meeting-icon">
-                        <h4>Meeting & events</h4>
+                        <h4>Meeting &amp;amp; events</h4>
                         <p>Punthill’s Conference Venues in Melbourne and Brisbane offer contemporary facilities suitable for holding conferences, meeting workshops and functions.</p>
                         <a href="#">more details</a>
                     </div>
@@ -298,7 +303,7 @@
             <img src="image/veriu-banner.jpg" alt="veriu-banner">
             <div>
                 <h1>Travelling to Sydney?</h1>
-                <p>We have created a bespoke collection of hotels & suites, each with its own distinct personality and style. All different – and yet all the same in their commitment to providing you with the very best service, an enviable location and at the end of the day, a great night’s sleep.</p>
+                <p>We have created a bespoke collection of hotels &amp;amp; suites, each with its own distinct personality and style. All different – and yet all the same in their commitment to providing you with the very best service, an enviable location and at the end of the day, a great night’s sleep.</p>
                 <a href="#">take me there</a>
             </div>
             <div>
@@ -323,7 +328,7 @@
                     <ul class="upper-text">
                         <li><a href="#">find a hotel</a></li>
                         <li><a href="#">corporate</a></li>
-                        <li><a href="#">meetings & events</a></li>
+                        <li><a href="#">meetings &amp;amp; events</a></li>
                         <li><a href="#">long stay</a></li>
                         <li><a href="#">rewards</a></li>
                         <li><a href="#">specials</a></li>
@@ -335,12 +340,12 @@
             <div>
                 <div>
                     <ul>
-                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Terms &amp;amp; Conditions</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Coporate Travel Program</a></li>
                         <li><a href="#">Best Price Guarantee</a></li>
                     </ul>
-                    <p> &copy; 2019 Punthill Apartment Hotels</p>
+                    <p> &amp;amp;copy; 2019 Punthill Apartment Hotels</p>
                 </div>
                 <div>
                     <h5>newsletter</h5>
@@ -356,6 +361,7 @@
     </footer>
     <!-- END-FOOTER--> 
     <!-- JAVASCRIPT-->
-    <script src="js/slider.js"></script>
+    <script src="js/comon.js"></script>
+    <script src="js/zebra-datepicker.min.js"></script>
 </body>
 </html>
