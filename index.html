@@ -9,10 +9,13 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/animation.css">
     <link rel="stylesheet" type="text/css" href="css/media-queries.css">
-    <link rel="stylesheet" type="text/css" href="css/zebra-datepicker.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
     <!-- FONT -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i&amp;amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!-- jQuery -->
+    <script src="external/jquery/jquery.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
 </head>
 <body>
     <!-- HEADER -->
@@ -42,7 +45,7 @@
                             </li>
                             <li><a href="#">groups</a></li>
                             <li><a href="#">corporate</a></li>
-                            <li><a href="#">meetings &amp;amp; events</a></li>
+                            <li><a href="#">meetings &amp; events</a></li>
                             <li><a href="#">rewards</a></li>
                             <li><a href="#">long stay</a></li>
                             <li><a href="#">contact</a></li>
@@ -114,35 +117,15 @@
             <div class="containerForm">
                 <form action="index.html">
                     <div class="checkin">
-                        <label class="upperText">check-in</label>
-                        <input type="hidden" name="checkin" id="checkin" value="2019-12-06">
-                        <div>
-                            <h3 class="dateBook">06</h3>
-                            <div class="monthBook">
-                                <p class="upperText">december, 2019</p>
-                                <p>Friday</p>
-                            </div>
-                        </div>
-                        <div class="checkinIcon clearFix">
-                            <a href="#"><img src="image/sort-icon.png" alt="sort-icon"></a>
-                        </div>
+                        <label>check-in</label>
+                        <input type="text" id="checkin" name="checkin" disabled="disabled">
                     </div>
                     <div class="checkout">
-                        <label class="upperText">check-out</label>
-                        <input type="hidden" name="checkout" id="checkout" value="2019-12-23">
-                        <div>
-                            <h3 class="dateBook">23</h3>
-                            <div class="monthBook">
-                                <p class="upperText">december, 2019</p>
-                                <p class="orangeText">Monday</p>
-                            </div>
-                        </div>
-                        <div  class="checkinIcon clearFix">
-                            <a href="#"><img src="image/sort-icon.png" alt="sort-icon"></a>
-                        </div>
+                        <label>check-out</label>
+                        <input type="text" id="checkout" name="checkout" disabled="disabled">
                     </div>
-                    <div  class="location">
-                        <label class="upperText">where</label><br>
+                    <div class="location">
+                        <label>where</label><br>
                         <div class="locaSelect">
                             <div class="whereIcon"><img src="image/pin-icon.png" alt="pin-icon"></div>
                             <div class="containerSelect">                  
@@ -170,21 +153,19 @@
     </section>
     <!-- END-SLIDER -->
     <!-- ABOUT -->
-    <section>
-        <div>
-            <div>
-                <div>
-                    <h5>about</h5>
-                    <div class="horizontal-line"></div>
-                </div>
-                <h2>Punthill Apartment Hotels in Melbourne &amp;amp; Brisbane</h2>
+    <section class="aboutSection clearFix">
+        <div class="aboutContainer">
+            <div class="aboutCol">
+                <h5>about</h5>
+                <div class="horizonLine"></div>
+                <h2>Punthill Apartment Hotels in Melbourne &amp; Brisbane</h2>
                 <p>Punthill Apartment Hotels offer stylish and spacious Brisbane and Melbourne accommodation apartments in 14 unrivalled locations, conveniently-located in prime areas throughout Melbourne and Brisbane.</p>
                 <p>Whether travelling for business or leisure you’ll feel right at home in our great range of accommodation including Studio, One, Two and Three Bedroom Apartments.</p>
                 <p>Our apartments in Melbourne and Brisbane are fully self-contained with cooking facilities and spacious living areas that make extended stays even more comfortable and economical.</p>
                 <p>Punthill has 4 Melbourne CBD locations which provide the perfect base for exploring Melbourne’s cosmopolitan cafes, boutique shopping, galleries, clubs and bars.</p>
                 <a href="">more details</a>
             </div>
-            <div>
+            <div  class="aboutCol">
                 <div>
                     <img src="image/about-img-1.jpg" alt="about-img1">
                     <div>
@@ -362,6 +343,15 @@
     <!-- END-FOOTER--> 
     <!-- JAVASCRIPT-->
     <script src="js/comon.js"></script>
-    <script src="js/zebra-datepicker.min.js"></script>
 </body>
 </html>
+
+
+
+
+<div class="form-group">
+        <div class="form-col form-col--arrival-date">
+          <div class="form-control">
+            <label for="booking-form-arrival-date">Arrival Date</label><span class="milenia-field-datepicker milenia-field-datepicker--style-1"><span class="milenia-field-datepicker-day">19</span><span class="milenia-field-datepicker-others"><span class="milenia-field-datepicker-month-year">July, 2019</span><span class="milenia-field-datepicker-dayname">Friday</span></span></span>
+            <input type="text" id="booking-form-arrival-date" name="booking-form-arrival-date" class="milenia-datepicker milenia-field-datepicker-invoker hasDatepicker">
+          </div>
