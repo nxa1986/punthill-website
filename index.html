@@ -141,10 +141,7 @@
                     </div>
                     <button class="submitBtn" type="submit">
                         <i class="far fa-check-circle submitBtnIcon"></i>
-                        <div class="submitBtnText">
-                            <p>check</p>
-                            <p>availability</p>
-                        </div>
+                         <span class="submitBtnText">check<br>availability</span>
                     </button>  
                 </form>
             </div>
@@ -163,12 +160,14 @@
                 <p>Whether travelling for business or leisure you’ll feel right at home in our great range of accommodation including Studio, One, Two and Three Bedroom Apartments.</p>
                 <p>Our apartments in Melbourne and Brisbane are fully self-contained with cooking facilities and spacious living areas that make extended stays even more comfortable and economical.</p>
                 <p>Punthill has 4 Melbourne CBD locations which provide the perfect base for exploring Melbourne’s cosmopolitan cafes, boutique shopping, galleries, clubs and bars.</p>
-                <a href="">more details</a>
+                <div class="detailBtnContainer">
+                    <a class="detailBtn" href="">more details</a>
+                </div>
             </div>
-            <div  class="aboutCol">
-                <div>
+            <div class="aboutCol">
+                <div class="aboutImgContainer">
                     <img src="image/about-img-1.jpg" alt="about-img1">
-                    <div>
+                    <div class="img2Container">
                         <img src="image/about-img-2.jpg" alt="about-img2">
                     </div>
                 </div>
@@ -179,10 +178,12 @@
     <!-- FEATURES -->
     <section>
         <div>
-            <div>
-                <div>
-                    <h4>Rewards</h4>
-                    <img src="image/about-rewards.jpg" alt="about-rewards">	
+            <div class="featureContainer">
+                <div class="featureCol">
+                    <div class="imgContainer">
+                        <h4>Rewards</h4>
+                        <img src="image/about-rewards.jpg" alt="about-rewards">
+                    </div>
                     <div>
                         <img src="image/about-reward-icon.svg" alt="rewards-icon">
                         <h4>Rewards</h4>
@@ -190,35 +191,35 @@
                         <a href="#">more details</a>
                     </div>
                 </div>
-            </div>
-            <div>
-                <div>
-                    <h4>Meeting &amp;amp; events</h4>
-                    <img src="image/about-meeting.jpg" alt="about-meeting">	
-                    <div>
+                <div class="featureCol">
+                    <div class="imgContainer">
+                        <h4>Meeting &amp; events</h4>
+                        <img src="image/about-meeting.jpg" alt="about-meeting">	
+                    </div>
+                    <div class="overlayImage">
                         <img src="image/about-meeting-icon.svg" alt="meeting-icon">
-                        <h4>Meeting &amp;amp; events</h4>
+                        <h4>Meeting &amp; events</h4>
                         <p>Punthill’s Conference Venues in Melbourne and Brisbane offer contemporary facilities suitable for holding conferences, meeting workshops and functions.</p>
-                        <a href="#">more details</a>
+                        <a class="detailBtnWhite" href="#">more details</a>
                     </div>
                 </div>
-            </div>
-            <div>
-                <div>
-                    <h4>Long stays</h4>
-                    <img src="image/about-longstay.jpg" alt="about-stay">	
+                <div class="featureCol">
+                    <div class="imgContainer">
+                        <h4>Long stays</h4>
+                        <img src="image/about-longstay.jpg" alt="about-stay">
+                    </div>	
                     <div>
                         <img src="image/about-stay-icon.svg" alt="stay-icon">
                         <h4>Long Stays</h4>
                         <p>Punthill have an extensive range of fully furnished serviced apartments in and around Melbourne CBD and Brisbane suitable for long-term stays.</p>
                         <a href="#">more details</a>
                     </div>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <h4>Specials</h4>
-                    <img src="image/about-special.jpg" alt="about-special">	
+                </div>            
+                <div class="featureCol">
+                    <div class="imgContainer">
+                        <h4>Specials</h4>
+                        <img src="image/about-special.jpg" alt="about-special">	
+                    </div>
                     <div>
                         <img src="image/about-gift-icon.svg" alt="special-icon">
                         <h4>Specials</h4>
@@ -345,13 +346,3 @@
     <script src="js/comon.js"></script>
 </body>
 </html>
-
-
-
-
-<div class="form-group">
-        <div class="form-col form-col--arrival-date">
-          <div class="form-control">
-            <label for="booking-form-arrival-date">Arrival Date</label><span class="milenia-field-datepicker milenia-field-datepicker--style-1"><span class="milenia-field-datepicker-day">19</span><span class="milenia-field-datepicker-others"><span class="milenia-field-datepicker-month-year">July, 2019</span><span class="milenia-field-datepicker-dayname">Friday</span></span></span>
-            <input type="text" id="booking-form-arrival-date" name="booking-form-arrival-date" class="milenia-datepicker milenia-field-datepicker-invoker hasDatepicker">
-          </div>
