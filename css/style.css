@@ -123,6 +123,7 @@ h5 {
 .aboutCol {
     width: 50%;
     padding: 0 2em;
+    margin-bottom: 10em;
 }
 .aboutCol:first-child {
     padding-left: 0;
@@ -147,6 +148,7 @@ h5 {
 }
 
 /* ---- Features ---- */
+
 .featureContainer {
     width: 100%;
     display: flex;
@@ -158,8 +160,40 @@ h5 {
     flex-direction: row;
     position: relative;
     overflow: hidden;
+    margin: 0 .2em;
+}
+.featureCol:first-child {
+    margin-left: 0;
+}
+.featureCol:last-child {
+    margin-right: 0;
 }
 
+/* ---- News ---- */
+.newsSection {
+    margin: auto;
+    max-width: 1170px;
+    margin-top: 8em;
+    margin-bottom: 6em;
+}
+
+/* ---- Ad Banner ---- */
+.adBannerSection {
+    width: 100%;
+    max-width: 1920px;
+    margin: auto;
+    background: url(../image/veriu-banner.jpg);
+    height: 565px;
+    position: relative;
+}
+
+/* ---- Footer ---- */
+footer {
+    margin: auto;
+    max-width: 1170px;
+    text-align: center;
+    margin-top: 5em;
+}
 /* ================================= 
   Page Elements
 ==================================== */
@@ -549,10 +583,17 @@ form {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background: rgba(0,0,0, .65);
+    background: rgba(0,0,0, .65);
+    opacity: 0;
+    transition: .5s;
+    text-align: center;
+    max-height: 610px;
 }
-.featureCol:hover .overlayImage {
+.overlayImage:hover {
     opacity: 1;
+}
+.featureCol:hover  .imgContainer h4 {
+    display: none;
 }
 .overlayImage img {
     height: 80px;
@@ -563,8 +604,180 @@ form {
     margin: 1em 0 2em 0;
 }
 .overlayImage p {
-    width: 85%;
-    margin: 0 auto 5em auto;
+    width: 80%;
+    margin: 0 auto 4em auto;
+}
+
+/* ---- News ---- */
+.newsHeader {
+    margin-bottom: 5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.leftHorizonLine,
+.rightHorizonLine {
+    height: 1px;
+    border-top:1px solid rgba(0,0,0,0.2);
+    width: 5.15em;
+    margin-top: .3em;
+}
+.leftHorizonLine {
+    margin-right: 1em;
+}
+.rightHorizonLine {
+    margin-left: 1em;
+}
+.newsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.articleContainer {
+    flex-grow: 1;
+    background-color: #f1f1f1;
+    max-width: 370px;
+    margin-left: 1.9em;
+    transition: box-shadow 0.3s ease;
+}
+.articleContainer:hover {
+    background-color: #fff;
+    -webkit-box-shadow: -1px 0px 13px 3px rgba(0,0,0,0.21);
+    -moz-box-shadow: -1px 0px 13px 3px rgba(0,0,0,0.21);
+    box-shadow: -1px 0px 13px 3px rgba(0,0,0,0.21);
+}
+.articleContainer:first-child {
+    margin-left: 0;
+}
+.textContainer {
+    padding: 2em 1.5em;
+}
+.textContainer h5 {
+    font-weight: 300;
+    margin-bottom: 1.5em;
+}
+.textContainer a {
+    color: #352c2d;
+    font-size: 1.1em;
+}
+.textContainer a:hover {
+    color: #f67f21; 
+}
+.articleAuthor {
+    padding-top: 1em;
+    font-weight: 400 !important;
+}
+.articleAuthor span {
+    color: #352c2d;
+}
+/* ---- Ad Banner ---- */
+.adBannerContainer {
+    text-align: center;
+}
+.veriu {
+    position: absolute;
+    bottom: 2.5em;
+    right: 1.3em;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+}
+.veriu:hover {
+    opacity: .5;   
+}
+.veriuBackground {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    border-bottom: solid 150px #000000;
+    border-right: solid 150px #000000;
+    border-left: solid 150px transparent;
+    border-top: solid 150px transparent;
+    z-index: 1;
+}
+.adBannerContent {
+    padding-top: 4em;
+}
+.adBannerContent p {
+    width: 50%;
+    margin: auto;
+    color: rgba(255, 255, 255, .9);
+    font-size: 1.4em;
+    line-height: 1.6em;
+    padding-top: 1em;
+    padding-bottom: 5em;
+}
+
+/* ---- Footer ---- */
+.socialLink {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.socialLink a {
+    margin-left: 1.2em;
+    color: rgba(0,0,0,0.5);
+    font-size: 1.1em;
+}
+.socialLink a:first-child {
+    margin-left: 0;
+}
+.socialLink a:hover {
+    color: #f67f21;
+}
+.footerNav li a {
+    text-transform: uppercase;
+    color: #352c2d;
+}
+.bottomFooter li a:hover,
+.footerNav li a:hover {
+    color: #f67f21;
+}
+.footerNav li {
+    list-style-type: none;
+    display: inline-block;
+    padding-left: 1.7em;
+    padding-bottom: 1.7em;
+}
+.bottomFooter li:first-child,
+.footerNav li:first-child {
+    padding-left: 0;
+}
+.topFooter {
+    border-bottom:1px solid rgba(0,0,0,0.2);
+    margin-bottom: 1.5em;
+}
+.bottomFooterContainer {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.bottomFooter ul {
+    padding: 0;
+}
+.bottomFooter li a {
+    color: #352c2d;
+    font-size: .9em;
+    font-weight: 300;
+}
+.bottomFooter li {
+    list-style-type: none;
+    display: inline-block;
+    padding-left: 1.7em;
+}
+.bottomFooter span {
+    font-size: .7em;
+    color: rgba(0,0,0,0.4);
+    padding-bottom: 1em;
+}
+.newsletterFooter {
+    width: 335px;
+}
+.newsletterFooter h5 {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    letter-spacing: 0;
 }
 /* ---- Clearfix ---- */
 .clearFix::after {
