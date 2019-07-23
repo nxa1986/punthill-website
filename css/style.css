@@ -745,7 +745,7 @@ form {
 }
 .topFooter {
     border-bottom:1px solid rgba(0,0,0,0.2);
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
 }
 .bottomFooterContainer {
     text-align: left;
@@ -771,13 +771,35 @@ form {
     color: rgba(0,0,0,0.4);
     padding-bottom: 1em;
 }
-.newsletterFooter {
-    width: 335px;
-}
 .newsletterFooter h5 {
     margin-top: 1.5em;
-    margin-bottom: 1em;
+    margin-bottom: 1.3em;
     letter-spacing: 0;
+}
+input[type=email] {
+    border: 0;
+    width: 250px;
+    font-size: .8em;
+    color: rgba(0,0,0,0.4);
+    font-style: italic;
+    font-weight: 300;
+    padding-bottom: .5em;
+}
+.newsletterContainer {
+    border-bottom: 1px solid #f67f21;
+}
+.newsletterContainer button {
+    border: 0;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #f67f21;
+}
+input[type=email]:focus,
+.newsletterContainer button:focus {
+    outline: none;
+}
+.newsletterContainer button:hover {
+    opacity: .6;
 }
 /* ---- Clearfix ---- */
 .clearFix::after {
