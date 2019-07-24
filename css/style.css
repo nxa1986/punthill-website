@@ -223,6 +223,7 @@ footer {
     padding-right: 5em;
     padding-left: 2.6em;
 }
+.navMobile,
 .containerNav,
 .containerLogo {
     border-right: 1px solid rgba(255, 255, 255, 0.4);
@@ -300,6 +301,13 @@ nav a:hover {
     top: 0;
     width: 100%;
     background-color: #352c2d;
+}
+.containerNav label,
+ #hamburger {
+    display:none;
+}
+.containerNav ul li:last-child {
+    display: none;
 }
 /* ---- Slider ---- */
 .bannerSlider {
@@ -793,6 +801,7 @@ input[type=email] {
     cursor: pointer;
     font-size: 1.2em;
     color: #f67f21;
+    background: transparent;
 }
 input[type=email]:focus,
 .newsletterContainer button:focus {
