@@ -1,15 +1,6 @@
-//  Fixed Nav =====================
-window.onscroll = function() {myFunction()};
-
-var header = document.getElementById("menuHeader");
-var sticky = header.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("stickyNav");
-  } else {
-    header.classList.remove("stickyNav");
-  }
+//  Hamburger Nav =====================
+function myFunction(x) {
+  x.classList.toggle("change");
 }
 
 //  Slider =====================

@@ -75,10 +75,12 @@ h5 {
 ==================================== */
 /* ---- Header Nav ---- */
 .navHeader {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 3;
+    height: 100px;
+    background:#352c2d;
 }
 .leftHeader,
 .rightHeader {
@@ -199,7 +201,6 @@ footer {
 ==================================== */
 /* ---- Header Nav ---- */
 .navBorder {
-    position: relative;
     height: 100px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
@@ -223,7 +224,6 @@ footer {
     padding-right: 5em;
     padding-left: 2.6em;
 }
-.navMobile,
 .containerNav,
 .containerLogo {
     border-right: 1px solid rgba(255, 255, 255, 0.4);
@@ -243,10 +243,21 @@ footer {
     padding-left: 5px;
     font-weight: 300;
 }
-.dropdownNav {
-    position: relative;
-    display: inline-block;
-    height: 100px;
+.dropdownNav .navText {
+    display: inline-block !important;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.875em;
+    font-weight: 400;
+}
+.dropdownNav input[type=checkbox] {
+    display: none
+}
+.dropdownNav input:checked ~ .dropdownContent {
+    display: block;
+}
+.dropdownNav input:not(:checked) ~ .dropdownContent {
+    display: none;
 }
 .dropdownContent {
     display: none;
@@ -268,8 +279,16 @@ footer {
 .dropdownContent a:hover {
     color: #f67f21;
 }
-.dropdownNav:hover .dropdownContent {
-    display: block;
+.toggleInput + label:after {
+    color: rgba(255, 255, 255, 0.5);
+    content: '\f107';
+    font-size: 1em;
+    padding-left: 0.3em;
+    font-family:"Font Awesome 5 Free";
+    font-weight: 900;
+}
+.toggleInput:checked + label:after {
+    content: '\f106';
 }
 nav ul {
     margin: 0;
@@ -290,20 +309,15 @@ nav a {
     font-size: 0.875em;
     font-weight: 400;
 }
+.dropdownNav .navText:hover,
 nav a:hover {
     color: rgba(255, 255, 255, 0.7);
 }
 .navMobile {
     display: none;
 }
-.stickyNav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #352c2d;
-}
 .containerNav label,
- #hamburger {
+#hamburger {
     display:none;
 }
 .containerNav ul li:last-child {
