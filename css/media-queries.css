@@ -759,9 +759,6 @@
     .aboutCol h2 {
         line-height: 1.3em;
     }
-    .aboutCol > p:nth-child(3n+1)  {
-        display: initial;
-    }
 /* --------- Feature --------- */
     .imgContainer h4 {
         font-size: 1em;
@@ -817,5 +814,30 @@
     .bottomFooter ul {
         margin-bottom: .5em;
         margin-top: 2em;
+    }
+}
+/* ================================= 
+450
+==================================== */
+@media screen and (max-width: 450px) {
+    /* --------- Header --------- */
+    .logoHeader {
+        width: 3em;
+    }
+    .containerLogo {
+        padding: .5em 0 0 1em;
+        border-right: none;
+    }
+    .navBorder {
+        height: 40px;
+    }
+    .containerNav {
+        padding-right: 1em;
+        padding-top: .7em;
+    }
+    .bar1, .bar2, .bar3 {
+        width: 20px;
+        height: 2px;
+        margin: 3px 0;
     }
 }
