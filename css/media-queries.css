@@ -1,14 +1,30 @@
 /* ================================= 
-Header Nav
+1770
 ==================================== */
-/* ---- 1595 ---- */
+@media screen and (max-width: 1770px) {
+    .dotContainer {
+        display: none;
+    }
+    .prev,
+    .next {
+        display: block;
+    }
+}
+/* ================================= 
+1595
+==================================== */
 @media screen and (max-width: 1595px) {
     .containerPhone {
         display:none;
     }
+    .bookingForm {
+        bottom: -10%;
+    }
 }
 
-/* ---- 1580 ---- */
+/* ================================= 
+1580
+==================================== */
 @media screen and (max-width: 1580px) {
     .navHamburger {
         display: inline-block;
@@ -30,48 +46,45 @@ Header Nav
         -webkit-transform: rotate(45deg) translate(-8px, -8px);
         transform: rotate(45deg) translate(-8px, -8px);
     }
+    .rightHeader {
+        display: flex;
+        flex-direction: row-reverse;
+    }
     .containerNav {
-        padding-top: 2em;
-        padding-right: 5em;
+        padding: 2em 5em 0 3em;
+        border-left: 1px solid rgba(255, 255, 255, 0.4);
+    }
+    .containerBtn {
+        padding-right: 3em;
+        padding-left: 0;
     }
     .containerNav li {
-        text-align: center;
+        text-align: right;
     }
     .containerNav label {
         display: inline-block;
-        color: #fff;
-        font-style: normal;
-        font-size: 1.2em;
+    }
+    .dropdownContent {
+        margin-right: -5em;
     }
     .dropdownNav .navText,
     nav a {
-        font-size: 1.1em;
+        font-size: 1em;
     }
     .dropdownNav .navText {
-        padding-top:.5em;
+        padding-top: 1.2em;
     }
     .navList {
         background: #352c2d;
-        width: 1579px;
         position: absolute;
         right: 0;
         margin-right: 0;
         top: 100px;
         box-shadow: -1px 0px 13px 3px rgba(0,0,0,0.21);
+        width: 1920px;
     }
     .navList li {
-        padding: 0 0 1em 0;
-    }
-    .navList .liBackground {
-        background: #f67f21 !important;
-        text-align: center;
-        padding-left: 0;
-    }
-    .btnBook {
-        color: #fff !important;
-    }
-    .btnBook i {
-        color: rgba(255, 255, 255, 0.4);
+        padding: 0 5em 1em 0;
     }
     .containerNav ul li {
         display: flex;
@@ -103,23 +116,706 @@ Header Nav
     .dropdownContent a {
         text-transform: capitalize !important;
         font-size: 1.1em;
-        text-align: center;
+        text-align: right;
         color: #fff;
     }
     .dropdownNav input:checked
     .dropdownNav {
         height: 60px;
     }
-    .dotContainer {
-        right: 7%;
+}
+
+/* ================================= 
+1440
+==================================== */
+@media screen and (max-width: 1440px) {
+    .overlayImage p {
+        margin: 0 auto 2em auto;
+        width: 85%;
+    }
+    .overlayImage h4 {
+        margin: 1em 0 1em 0;
+    }
+    .overlayImage {
+        margin-top: -1.5em;
+    }
+}
+
+/* ================================= 
+1366
+==================================== */
+@media screen and (max-width: 1366px) {
+    .overlayImage h4 {
+       letter-spacing: .1em;
+    }
+    .img2Container {
+        right: -4em;
+    }
+    .overlayImage img {
+        height: 60px;
+    }
+    .slideCaption {
+        top: 30%;
+    }
+}
+
+/* ================================= 
+1270
+==================================== */
+@media screen and (max-width: 1270px) {
+    body {
+        font-size: .95em;
+    }
+/* --------- Header --------- */
+    .logoHeader {
+        width: 6em;
+    }
+    .containerLogo {
+        padding: .5em 3.125em 0 4em;
+    }
+    .bar1, .bar2, .bar3 {
+        width: 30px;
+        height: 4px;
+    }
+    .bar2 {
+        margin: 7px 0;
+    }
+    .containerBtn {
+        padding-top: 2em;
+    }
+    .containerNav {
+        padding-right: 4em;
+        padding-top: 1.4em;
+    }
+    .navBorder {
+        height: 80px;
+    }
+    .navList {
+        top: 80px;
+    }
+    .dropdownNav .navText, nav a,
+    .dropdownContent a {
+        font-size: 1em;
+    }
+    .dropdownContent li {
+        padding-bottom: 1.2em;
+    }
+    .dropdownNav .navText {
+        padding-top: 1em;
+    }
+   .bar3 {
+        margin: 7px 0;
+   }
+
+/* --------- Slider --------- */
+    h1 {
+        font-size: 3.5em;
+    }
+    h4 {
+        font-size: 1.2em;
+    }
+    .slideCaption {
+        top: 33%;
+    }
+    .btn {
+        font-size: .9em;
+    }
+    .prev,
+    .next {
+        top: 50%;
+    }
+
+/* --------- About --------- */
+    .aboutSection {
+        width: 80%;
+    }
+    h2 {
+        font-size: 2.85em;
+        line-height: 1;
+    }
+    .detailBtn {
+        font-size: .8em;
+    }
+    .aboutImgContainer img {
+        width: 95%;
+    }
+    .img2Container {
+        right: -3em;
+    }
+    .img2about {
+        width: 80% !important;
+    }
+    p {
+        font-size: .95em;
+    }
+    .aboutCol {
+        margin-bottom: 6em;
+    }
+
+/* --------- Feature --------- */
+    .overlayImage p {
+        margin: 0 auto 2em auto;
+        width: 90%;
+        font-size: .9em;
+    }
+    .detailBtn, .detailBtnWhite {
+        font-size: .7em;
+    }
+
+/* --------- News --------- */
+    .newsSection {
+        width: 80%;
+        margin: 6em auto 5em auto;
+    }
+    .newsHeader {
+        margin-bottom: 4em;
+    }
+    .articleContainer {
+        max-width: 320px;
+        margin-left: 1.7em;
+    }
+    .articleContainer img {
+        width: 100%;
+    }
+    h5 {
+        font-size: 0.7em;
+    }
+
+/* --------- Ad Banner --------- */
+    .adBannerContent p {
+        font-size: 1.3em;
+        width: 70%;
+    }
+    .adBannerContent {
+        padding-top: 4.5em;
+    }
+
+/* --------- Footer --------- */
+    footer {
+        margin-top: 4em;
+        width: 80%;
+    }
+    .topFooter img {
+        width: 200px;
+    }
+}
+
+/* ================================= 
+1260
+==================================== */
+@media screen and (max-width: 1260px) {
+    body {
+        font-size: .9em;
+    }
+
+/* --------- Booking Form --------- */
+    .checkin, .checkout, .location {
+        width: 23%;
+    }
+    input[type=text] {
+        margin-top: 1.1em;
+        margin-bottom: .3em;
+    }
+    .whereIcon img {
+        width: 20px;
+    }
+    .containerForm {
+        width: 90%;
+    }
+    .checkin label,
+    .checkout label,
+    .location label {
+        font-size: .85em;
+    }
+    .checkin label,
+    .checkout label {
+        display: block;
+        margin-bottom: .5em;
+    }
+    input[type=text] {
+        font-size: 1.1em;
+        min-width: 230px;
+    }
+    img.ui-datepicker-trigger {
+        margin-top: 0 !important;
+    }
+    form {
+        height: 110px;
+    }
+    .checkin,
+    .checkout {
+        margin-top: 2.5em;
+    }
+    .checkin {
+        margin-left: 2em;
+    }
+    .location {
+        margin-top: 1.5em;
+    }
+    .checkin, .checkout, .location {
+        width: 26%;
+    }
+    .location,
+    .checkout {
+        margin-left: 1.7em;
+    }
+    .whereIcon img {
+        width: 25px;
+    }
+    .submitBtn {
+        font-size: .9em;
+        height: 110px;
+        width: auto;
+        padding: 0 2em;
+    }
+    .whereIcon {
+        padding-top: .5em;
+    }
+    select {
+        min-width: 16em;
+    }
+    .containerSelect {
+        padding-top: 1.3em;
+    }
+    .bookingForm {
+        bottom: -10%;
+    }
+    .fa-check-circle:before {
+        font-size: .95em;
+    }
+
+/* --------- About --------- */
+    h2 {
+        font-size: 2.65em;
+        line-height: 1;
+    }
+    p {
+        font-size: .95em;
+    }
+    .aboutCol {
+        margin-bottom: 12em;
+    }
+    .aboutContainer {
+        margin-top: 10em;
+    }
+
+/* --------- News --------- */
+    .newsSection {
+        margin: 4em auto 5em auto;
+    }
+/* --------- Ad Banner --------- */
+    .veriuBackground {
+        width: 250px;
+        height: 250px;
+        border-bottom: solid 125px #000000;
+        border-right: solid 125px #000000;
+        border-left: solid 125px transparent;
+        border-top: solid 125px transparent;
+    }
+    .veriu {
+        width: 120px;
+    }
+    .adBannerSection {
+        height: 500px;
+    }
+
+/* --------- Footer --------- */
+    footer {
+        width: 80%;
+    }
+}
+
+/* ================================= 
+1150
+==================================== */
+@media screen and (max-width: 1150px) {
+/* --------- Header --------- */
+    .navList {
+        top: 70px;
+    }
+    .containerLogo {
+        padding: .5em 3em 0 3em;
+    }
+    .navBorder {
+        height: 70px;
+    }
+    .containerNav {
+        padding-right: 3em;
+        padding-top: 1.2em;
+    }
+
+/* --------- Slider --------- */
+    h1 {
+        font-size: 3em;
+    }
+    h4 {
+        font-size: 1em;
+    }
+    .slideCaption {
+        top: 38%;
+    }
+    .btn {
+        font-size: .9em;
+    }
+    .prev,
+    .next {
+        top: 50%;
+    }
+
+/* --------- About --------- */
+    .aboutContainer {
+        margin-top: 10em;
+    }
+
+/* --------- Booking Form --------- */
+    .checkin,
+    .checkout {
+        display: block;
+        width: 32%;
+    }
+    .submitBtn {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 1em 0;
+        line-height: 0;
+        margin-top: 1em;
+    }
+    .submitBtn br {
+        display: none;
+    }
+    .submitBtn i {
+        font-size: 1.5em;
+    }
+    .containerForm {
+        width: 82%;
+    }
+    form {
+        height: 145px;
+    }
+    .bookingForm {
+        bottom: -15%;
+    }
+}
+/* ================================= 
+1110
+==================================== */
+@media screen and (max-width: 1110px) {
+/* --------- Booking Form --------- */
+    .checkin,
+    .checkout {
+        display: block;
+        width: 30%;
+    }
+    input[type=text] {
+        min-width: 200px;
+    }
+}
+/* ================================= 
+980
+==================================== */
+@media screen and (max-width: 980px) {
+/* --------- Booking Form --------- */
+    .checkin,
+    .checkout {
+        display: block;
+        width: 28%;
+    }
+    input[type=text] {
+        min-width: 180px;
+    }
+    .bookingForm {
+        bottom: -20%;
+    }
+
+/* --------- About --------- */
+    .aboutContainer {
+        margin-top: 12em;
+    }
+    .aboutCol {
+        margin-bottom: 5em;
+    }
+
+/* --------- Feature --------- */
+    .overlayImage img {
+        height: 45px;
+    }
+
+/* --------- Footer --------- */
+    footer {
+        width: 80%;
+    }
+    .footerNav ul {
+        padding-left: 0;
+        font-size: .85em;
+    }
+    .bottomFooter ul {
+        font-size: .85em;
+    }
+}
+/* ================================= 
+880
+==================================== */
+@media screen and (max-width: 880px) {
+/* --------- Slider --------- */
+    .slideCaption {
+        top: 32%;
+    }
+
+/* --------- Booking Form --------- */
+    .checkin,
+    .checkout {
+        display: none;
+    }
+    .bookingForm {
+        bottom: -12%;
+    }
+    form {
+        height: 100px;
+    }
+    .submitBtn {
+        position: absolute;
+        width: auto;
+        height: 100px;
+        top: 0;
+        padding: 0 3em;
+        margin-top: 0;
+    }
+    .location {
+        margin-left: 3em;
+        margin-top: 1em;
+    }
+    select {
+        min-width: 20em;
+        font-size: 1em;
+        margin-top: .5em;
+    }
+/* --------- About --------- */
+    .aboutContainer {
+        margin-top: 10em;
+    }
+    .aboutCol h2 {
+        font-size: 2.3em;
+    }
+    .aboutCol {
+        margin-bottom: 7em;
+    }
+    .aboutCol > p:nth-child(3n+1)  {
+        display: none;
+    }
+
+/* --------- Feature --------- */
+    .overlayImage p {
+        display: none;
+    }
+    .overlayImage h4 {
+        margin: 1em 0 3em 0;
+    }
+
+/* --------- News --------- */
+    .newsContainer > div:last-child {
+        display: none;
+    }
+
+/* --------- Footer --------- */
+    footer {
+        width: 80%;
+    }
+    .bottomFooter li:last-child {
+        padding-left: 0;
+    }
+}
+/* ================================= 
+850
+==================================== */
+@media screen and (max-width: 850px) {
+/* --------- Feature --------- */
+    .featureContainer {
+        flex-wrap: wrap;
+        width: 80%;
+    }
+    .featureCol {
+        width: 50%;
+        margin: 0;
+    }
+    .imgContainer {
+        height: 250px;
+    }
+}
+/* ================================= 
+760
+==================================== */
+@media screen and (max-width: 760px) {
+/* --------- Booking Form --------- */
+    .bookingForm {
+        position: static;
+        margin-top: -.35em;
+        background-color: #f1f1f1;
+    }
+    form {
+        background-color: #f1f1f1;
+    }
+    .containerForm {
+        width: 100%;
+    }
+    select {
+        min-width: 15em;
+    }
+/* --------- About --------- */
+    .aboutContainer {
+        margin-top: 7em;
+    }
+/* --------- Ad Banner --------- */
+.veriuBackground {
+    width: 200px;
+    height: 200px;
+    border-bottom: solid 100px #000000;
+    border-right: solid 100px #000000;
+    border-left: solid 100px transparent;
+    border-top: solid 100px transparent;
+}
+.veriu {
+    width: 80px;
+}
+}
+/* ================================= 
+570
+==================================== */
+@media screen and (max-width: 570px) {
+/* --------- Header --------- */
+    .logoHeader {
+        width: 5em;
+    }
+    .containerLogo {
+        padding-left: 2.5em;
     }
     .containerBtn {
         display: none;
     }
-    .containerNav ul li:last-child {
-        display: block;
+    .containerNav {
+        border-left: none;
     }
-    .verLine {
-        height: 300px;
+    .navList {
+        top: 60px;
+    }
+    .navBorder {
+        height: 60px;
+    }
+    .containerNav {
+        padding-top: .8em;
+    }
+    .navList li {
+        padding: 0 3em 1em 0;
+    }
+/* --------- Slider --------- */
+    .slideCaption .btn {
+        display: none;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    h4 {
+        font-size: .8em;
+    }
+    .slideCaption {
+        top: 48%;
+    }
+    .prev {
+        padding-left: 1.2em;
+    }
+    .next {
+        padding-right: 1.2em;
+    }
+/* --------- Form --------- */
+    .submitBtn {
+        position: static;
+        height: auto;
+        padding: 1em 0;
+        margin-top: 1em;
+        width: 100%;
+    }
+    .location {
+        width: 100%;
+    }
+    form {
+        height: 138px;
+    }
+    select {
+        min-width: 27em;
+    }
+/* --------- About --------- */
+    .aboutContainer {
+        margin-top: 5em;
+    }
+    .aboutCol {
+        clear: both;
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 3em;
+    }
+    .aboutImgContainer {
+        display: none;
+    }
+    .aboutCol h2 {
+        line-height: 1.3em;
+    }
+    .aboutCol > p:nth-child(3n+1)  {
+        display: initial;
+    }
+/* --------- Feature --------- */
+    .imgContainer h4 {
+        font-size: 1em;
+    }
+
+/* --------- News --------- */
+    .newsContainer > div:nth-child(2) {
+        display: none;
+    }
+    .articleContainer {
+        max-width: 100%;
+    }
+    .newsHeader {
+        margin-bottom: 2em;
+    }
+
+/* --------- Ad Banner --------- */
+    .adBannerContent p {
+        font-size: 1em;
+        width: 70%;
+    }
+    .adBannerContent {
+        padding-top: 3.5em;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    .adBannerSection {
+        height: 400px;
+    }
+/* --------- Footer --------- */
+    .topFooter img {
+        width: 150px;
+    }
+    .bottomFooterContainer {
+        text-align: center;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .newsletterContainer {
+        width: 60%;
+        margin: auto;
+    }
+    input[type=email] {
+        width: 80%;
+    }
+    .bottomFooter li:last-child {
+        padding-left: 1.7em;
+    }
+    .footerNav li {
+        padding-bottom: 1em;
+    }
+    .bottomFooter ul {
+        margin-bottom: .5em;
+        margin-top: 2em;
     }
 }

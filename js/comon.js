@@ -34,7 +34,7 @@ function showSlides(n) {
 //  datePicker =====================
 $(document).ready(function(){
   $("#checkin").datepicker({
-    dateFormat:"dd MM yy",
+    dateFormat:"dd M yy",
     showOn: "button",
     buttonImage: "image/sort-icon.png",
     buttonImageOnly: true,
@@ -46,7 +46,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
   $("#checkout").datepicker({
-    dateFormat:"dd MM yy",
+    dateFormat:"dd M yy",
     showOn: "button",
     buttonImage: "image/sort-icon.png",
     buttonImageOnly: true,

@@ -79,7 +79,6 @@ h5 {
     top: 0;
     width: 100%;
     z-index: 3;
-    height: 100px;
     background:#352c2d;
 }
 .leftHeader,
@@ -146,6 +145,8 @@ h5 {
     position: absolute;
     bottom: -8em;
     right: -8em;
+}
+.img2about {
     border: 1.3em solid #fff;
 }
 
@@ -318,9 +319,6 @@ nav a:hover {
 }
 .containerNav label,
 #hamburger {
-    display:none;
-}
-.containerNav ul li:last-child {
     display: none;
 }
 /* ---- Slider ---- */
@@ -376,21 +374,19 @@ nav a:hover {
 }
 .prev,
 .next {
-    display:none;
+    display: none;
     position: absolute;
     cursor: pointer;
     top: 50%;
-    color: white;
+    color: rgba(255, 255, 255, 0.2);
     font-size: 2em;
     transition: 0.6s ease;
     user-select: none;
 }
 .prev {
-    content:"/f053";
     padding-left: 2em;
 }
 .next {
-    content:"/f054";
     right: 0;
     padding-right: 2em;
 }
@@ -489,6 +485,7 @@ input[type=text] {
     font-size: 1.5em;
     font-weight: 300;
     color: #352c2d;
+    margin-bottom: .6em;
 }
 .datepickerDate {
     display:block;
@@ -557,6 +554,7 @@ form {
     display: flex;
 	flex-direction: row;
     align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 /* ---- About ---- */
@@ -580,6 +578,15 @@ form {
 }
 
 /* ---- Features ---- */
+.imgContainer {
+    position: relative;
+    width: 100%;
+}
+.imgContainer img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
 .imgContainer h4 {
     position: absolute;
     letter-spacing: .2em;
@@ -609,7 +616,6 @@ form {
     opacity: 0;
     transition: .5s;
     text-align: center;
-    max-height: 610px;
 }
 .overlayImage:hover {
     opacity: 1;
