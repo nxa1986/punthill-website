@@ -683,29 +683,11 @@
 ==================================== */
 @media screen and (max-width: 570px) {
 /* --------- Header --------- */
-    .logoHeader {
-        width: 5em;
-    }
-    .containerLogo {
-        padding-left: 2.5em;
-    }
     .containerBtn {
         display: none;
     }
     .containerNav {
         border-left: none;
-    }
-    .navList {
-        top: 60px;
-    }
-    .navBorder {
-        height: 60px;
-    }
-    .containerNav {
-        padding-top: .8em;
-    }
-    .navList li {
-        padding: 0 3em 1em 0;
     }
 /* --------- Slider --------- */
     .slideCaption .btn {
@@ -821,27 +803,7 @@
 ==================================== */
 @media screen and (max-width: 450px) {
     /* --------- Header --------- */
-    .containerLogo {
-        padding: .5em 0 0 2em;
-        border-right: none;
-    }
     .navHeader {
-        max-width: 100%;
-    }
-    .navBorder {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .containerNav {
-        border: none;
-    }
-    .leftHeader {
-        width: 70%;
-        clear: both;
-    }
-    .rightHeader {
-        width: 30%;
-        clear: both;
+        position: static;
     }
 }
