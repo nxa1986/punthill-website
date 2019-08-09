@@ -40,9 +40,9 @@ h4,
 }
 h1 {
     font-size: 4.375em;
-    line-height:0;
+    line-height: 0;
     letter-spacing: .15em;
-    margin-top: 0 em;
+    margin-top: 0;
     font-weight: 700;
 }
 h2 {
@@ -515,11 +515,6 @@ select {
     text-transform: uppercase;
     outline: none;
     margin: 0;      
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-appearance: none;
-    -moz-appearance: none;
 }
 select.selectIcon {
     background: url(../image/where-icon.png);
@@ -670,8 +665,6 @@ form {
 }
 .articleContainer:hover {
     background-color: #fff;
-    -webkit-box-shadow: -1px 0px 13px 3px rgba(0,0,0,0.21);
-    -moz-box-shadow: -1px 0px 13px 3px rgba(0,0,0,0.21);
     box-shadow: -1px 0px 13px 3px rgba(0,0,0,0.21);
 }
 .articleContainer:first-child {

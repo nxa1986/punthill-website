@@ -802,8 +802,73 @@
 450
 ==================================== */
 @media screen and (max-width: 450px) {
-    /* --------- Header --------- */
+/* --------- Header --------- */
     .navHeader {
         position: static;
+    }
+    .containerLogo {
+        padding: .5em 3em 0 2em;
+        border-right: none;
+    }
+    .containerLogo {
+    padding: .5em 3em 0 3em;
+    }
+    .containerNav {
+        border-right: none;
+        padding-right: 2em;
+    }
+
+/* --------- Slider --------- */
+    .slideCaption {
+        top: 42%;
+    }
+    .prev,
+    .next {
+        top: 40%;
+    }
+    .prev {
+        padding-left: .5em;
+    }
+    .next {
+        padding-right: .5em;
+    }
+    select {
+        min-width: 20em;
+    }
+    .location {
+        margin-left: 2em;
+    }
+/* --------- Feature --------- */
+    .featureCol {
+        width: 100%;
+        height: auto;
+    }
+/* --------- Ad Banner --------- */
+    .adBannerContainer img,
+    .veriuBackground {
+        display: none;
+    }
+    .adBannerContent p {
+        font-size: .8em;
+        width: 70%;
+    }
+    .adBannerContent {
+        padding-top: 7em;
+    }
+    h1 {
+        font-size: 1.2em;
+    }
+    .adBannerSection {
+        height: 400px;
+    }
+/* --------- Footer --------- */
+    .footerNav {
+        display: none;
+    }
+    .bottomFooter ul {
+        font-size: .5em;
+    }
+    .bottomFooter span {
+        font-size: .3em;
     }
 }
