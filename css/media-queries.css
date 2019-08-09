@@ -820,11 +820,12 @@
 
 /* --------- Slider --------- */
     .slideCaption {
-        top: 42%;
+        top: 40%;
     }
     .prev,
     .next {
         top: 40%;
+        font-size: 1.3em;
     }
     .prev {
         padding-left: .5em;
@@ -837,6 +838,10 @@
     }
     .location {
         margin-left: 2em;
+    }
+    .slideCaption h4 {
+        font-size: .5em;
+        letter-spacing: .1em;
     }
 /* --------- Feature --------- */
     .featureCol {
@@ -857,6 +862,7 @@
     }
     h1 {
         font-size: 1.2em;
+        line-height: 1em;
     }
     .adBannerSection {
         height: 400px;
