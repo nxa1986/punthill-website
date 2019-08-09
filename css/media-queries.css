@@ -834,7 +834,7 @@
         padding-right: .5em;
     }
     select {
-        min-width: 20em;
+        min-width: 15em;
     }
     .location {
         margin-left: 2em;
@@ -858,7 +858,7 @@
         width: 70%;
     }
     .adBannerContent {
-        padding-top: 7em;
+        padding-top: 5em;
     }
     h1 {
         font-size: 1.2em;
