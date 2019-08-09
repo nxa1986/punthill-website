@@ -821,23 +821,27 @@
 ==================================== */
 @media screen and (max-width: 450px) {
     /* --------- Header --------- */
-    .logoHeader {
-        width: 3em;
-    }
     .containerLogo {
-        padding: .5em 0 0 1em;
+        padding: .5em 0 0 2em;
         border-right: none;
     }
+    .navHeader {
+        max-width: 100%;
+    }
     .navBorder {
-        height: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
     .containerNav {
-        padding-right: 1em;
-        padding-top: .7em;
+        border: none;
     }
-    .bar1, .bar2, .bar3 {
-        width: 20px;
-        height: 2px;
-        margin: 3px 0;
+    .leftHeader {
+        width: 70%;
+        clear: both;
+    }
+    .rightHeader {
+        width: 30%;
+        clear: both;
     }
 }
