@@ -472,6 +472,11 @@ nav a:hover {
 }
 /* ---- Booking Form ---- */
 .checkin label,
+.checkout label {
+    display: block;
+    margin-top: 1em;
+}
+.checkin label,
 .checkout label,
 .location label {
     color: #f67f21;
@@ -486,6 +491,7 @@ input[type=text] {
     font-weight: 300;
     color: #352c2d;
     margin-bottom: .6em;
+    max-width: 150px;
 }
 .datepickerDate {
     display:block;
