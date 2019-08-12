@@ -508,7 +508,7 @@ input[type=text] {
 select {
     cursor: pointer;
     font-size: 0.8125em;
-    background: transparent;
+    background: rgba(255, 255, 255, 0);
     border: none;
     color:#352c2d;
     width: 15em;
