@@ -805,19 +805,19 @@
 /* --------- Header --------- */
     .navHeader {
         position: static;
+        z-index: 3;
     }
     .containerLogo {
         padding: .5em 3em 0 2em;
         border-right: none;
     }
-    .containerLogo {
-    padding: .5em 3em 0 3em;
-    }
     .containerNav {
         border-right: none;
         padding-right: 2em;
     }
-
+    .navList {
+        z-index: 3;
+    }
 /* --------- Slider --------- */
     .slideCaption {
         top: 40%;
@@ -847,6 +847,7 @@
     .featureCol {
         width: 100%;
         height: auto;
+        margin: 0 0 1em 0;
     }
 /* --------- Ad Banner --------- */
     .adBannerContainer img,

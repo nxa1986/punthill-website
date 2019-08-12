@@ -514,7 +514,10 @@ select {
     width: 15em;
     text-transform: uppercase;
     outline: none;
-    margin: 0;      
+    margin: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;      
 }
 select.selectIcon {
     background: url(../image/where-icon.png);
