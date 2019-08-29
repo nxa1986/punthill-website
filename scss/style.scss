@@ -261,12 +261,8 @@ h5 {
 }
 /* ---- About ---- */
 .aboutSection {
-    @include marginCenter (
-        $width-grid-desktop,
-        $t-margin:auto,
-        $l-margin:auto,
-        $b-margin:auto,
-        $r-margin:auto);
+    margin: auto;
+    max-width: 1170px;
 }
 .aboutContainer {
     margin-top: 12em;
@@ -348,10 +344,8 @@ h5 {
 
 /* ---- News ---- */
 .newsSection {
-    @include marginCenter (
-        $width-grid-desktop,
-        $t-margin:8em,
-        $b-margin:6em);
+    max-width: 1170px;
+    margin: 8em auto 6em auto;
 }
 
 /* ---- Ad Banner ---- */

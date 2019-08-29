@@ -143,11 +143,8 @@ h5 {
 
 /* ---- About ---- */
 .aboutSection {
-  width: 1170px;
-  margin-top: auto;
-  margin-left: auto;
-  margin-bottom: auto;
-  margin-right: auto;
+  margin: auto;
+  max-width: 1170px;
 }
 
 .aboutContainer {
@@ -245,9 +242,8 @@ h5 {
 
 /* ---- News ---- */
 .newsSection {
-  width: 1170px;
-  margin-top: 8em;
-  margin-bottom: 6em;
+  max-width: 1170px;
+  margin: 8em auto 6em auto;
 }
 
 /* ---- Ad Banner ---- */
