@@ -1,14 +1,17 @@
 //Variables
 $color-white: rgba(255,255,255,1);
 $color-black: rgba(53,44,45,1);
+$color-dark-grey:rgba(0,0,0,0.4);
 $color-grey: rgba(241,241,241,1);
 $color-orange: rgba(246,127,33,1);
+$color-link: rgba(255, 255, 255, 0.5);
+$color-link-hover: rgba(255, 255, 255, 0.7);
 $box-shadow: 0px 8px 30px 0px rgba(0,0,0,0.2);
 $border-white: 1px solid rgba(255, 255, 255, 0.4);
 $border-grey: 1px solid rgba(0,0,0,0.2);
 $primary-font: 'Lato', sans-serif;
 $width-grid-desktop: 1170px;
-$height-header: 100x;
+$height-header: 100px;
 $border-white: 1px solid rgba(255, 255, 255, 0.4);
 $border-grey: 1px solid rgba(0,0,0,0.2);
 $shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -26,26 +29,58 @@ $shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     list-style-type: none;
     display: inline;
 }
-
+%animation {
+    transition: opacity 0.3s ease;
+}
+%form-label {
+    color: $color-orange;
+    text-transform: uppercase;
+    line-height: 0;
+}
+%check-label {
+    display: block;
+    margin-top: 1em;
+}
 
 //Mixins
-@mixin fontHeader($size, $weight, $line-height:null) {
-    font: {
-        size: $size;
-        weight: $weight;
-    }
-    line-height: $line-height;
+@mixin fontHeader (
+    $size,
+    $weight,
+    $line-height:null) {
+        font: {
+            size: $size;
+            weight: $weight;
+        }
+        line-height: $line-height;
 }
-@mixin position($position, $z-index:null) {
-    position: $position;
-    z-index: $z-index;
+@mixin positionItem (
+    $position,
+    $t-position:null,
+    $r-position:null,
+    $b-position:null,
+    $l-position:null,
+    $z-index:null) {
+        position: $position;
+        top: $t-position;
+        right: $r-position;
+        bottom: $b-position;
+        left: $l-position;
+        z-index: $z-index;
 }
-@mixin colHeader($width, $float, $height:inherit) {
-    width: $width;
-    float: $float;
-    height: $height;
+@mixin colHeader (
+    $width:null,
+    $float:null,
+    $height:null) {
+        width: $width;
+        float: $float;
+        height: $height;
 }
-@mixin marginCenter($width, $t-margin:null, $l-margin:null, $b-margin:null, $r-margin:null) {
+@mixin marginCenter (
+    $width,
+    $t-margin:null,
+    $l-margin:null,
+    $b-margin:null,
+    $r-margin:null) {
         width: $width;
         margin: {
             top: $t-margin;
@@ -54,17 +89,81 @@ $shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             right: $r-margin;
         }
 }
-@mixin dropdownContent ($background, $display, $padding-left, $min-width, $border-radius, $box-shadow) {
-    background-color: $background;
-    display: $display;
-    padding-left: $padding-left;
-    min-width: $min-width;
-    border-radius: $border-radius;
-    box-shadow: $box-shadow;
+@mixin dropdownContent (
+    $background,
+    $display,
+    $padding-left,
+    $min-width,
+    $border-radius,
+    $box-shadow) {
+        background-color: $background;
+        display: $display;
+        padding-left: $padding-left;
+        min-width: $min-width;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow;
 }
-@mixin dropdownContent_a ($display, $text-align) {
-    display: $display;
-    text-align: $text-align;
+@mixin dropdownContent_a (
+    $display,
+    $text-align) {
+        display: $display;
+        text-align: $text-align;
+}
+@mixin btn (
+    $b-radius:2em,
+    $background:null,
+    $t-align:center,
+    $t-transform:uppercase,
+    $color:null,
+    $t-padding:null,
+    $r-padding:null,
+    $b-padding:null,
+    $l-padding:null) {
+        border-radius: $b-radius;
+        background-color: $background;
+        text-align: $t-align;
+        text-transform: $t-transform;
+        color: $color;
+        padding: {
+            top: $t-padding;
+            right: $r-padding;
+            bottom: $b-padding;
+            left: $l-padding;
+        }
+}
+@mixin input-text (
+    $size:null,
+    $m-width:null,
+    $b-margin:null,
+    $t-margin:null) {
+        font-size: $size;
+        max-width: $m-width;
+        margin-bottom: $b-margin;
+        margin-top: $t-margin;   
+}
+@mixin datepicker (
+    $display:null,
+    $size:null,
+    $weight:null,
+    $t-transform:null,
+    $color:null) {
+        display: $display;
+        font-size: $size;
+        font-weight: $weight;
+        text-transform: $t-transform;
+        color: $color; 
+}
+@mixin display-flex (
+    $f-direction,
+    $display:flex,
+    $align:null,
+    $wrap:null,
+    $justify:null) {
+        flex-direction: $f-direction;
+        display: $display;
+        align-items: $align;
+        flex-wrap: $wrap;
+        justify-content: $justify;
 }
 
 /* ================================= 
@@ -117,17 +216,25 @@ h5 {
 ==================================== */
 /* ---- Header Nav ---- */
 .navHeader {
-    @include navHeader(fixed);
     width: 100%;
-    top: 0;
     background: $color-black;
+    @include positionItem (
+        fixed,
+        $t-position:0,
+        $z-index:3);
 }
 .leftHeader {
-    @include colHeader(30%, left);
+    @include colHeader (
+        $width:30%,
+        $float:left,
+        $height:inherit);
 }
 .rightHeader {
-    @include colHeader(70%, right);
     text-align: right;
+    @include colHeader (
+        $width:70%,
+        $float:right,
+        $height:inherit);
 }
 /* ---- Slider ---- */
 .slider {
@@ -136,22 +243,35 @@ h5 {
 
 /* ---- Form ---- */
 .bookingForm {
-    @include postion(absolute, 2);
     width: 100%;
-    bottom: -8%;
+    @include positionItem (
+        absolute,
+        $b-position:-8%,
+        $z-index:2);
 }
 .containerForm {
-    @include marginCenter($width-grid-desktop, 0 auto 0 auto);
     position: relative;
+    @include marginCenter(
+        $width-grid-desktop,
+        $t-margin:0,
+        $l-margin:auto,
+        $b-margin:0,
+        $r-margin:auto);
 }
 /* ---- About ---- */
 .aboutSection {
-    @include mmarginCenter($width-grid-desktop, 0 auto 0 auto);
+    @include marginCenter (
+        $width-grid-desktop,
+        $t-margin:0,
+        $l-margin:auto,
+        $b-margin:0,
+        $r-margin:auto);
 }
 .aboutContainer {
     margin-top: 12em;
 }
 .aboutCol {
+    padding: 0 2em;
     :first-child {
         padding-left: 0;
         float: left;
@@ -164,30 +284,47 @@ h5 {
     .detailBtnContainer {
         margin-top: 4em;
     }
-    margin-bottom: 10em;
-    width: 50%;
-    padding: 0 2em;
+    > p {
+        line-height: 1.7em;
+        margin-bottom: 1.5em;
+    }
+    > div > h5 {
+        float: left;
+        margin-top: 0;
+        padding-top: 0;
+    }
+    > div > p {
+        margin-right: 2em;
+    }
+    @include marginCenter (
+        50%,
+        $b-margin:10em);
 }
 .aboutImgContainer {
     position: relative;
 }
 .img2Container {
-    position: absolute;
-    bottom: -8em;
-    right: -8em;
+    @include positionItem (
+        absolute,
+        $r-position:-8em,
+        $b-position:-8em);
 }
 .img2about {
-    border: 1.3em solid #fff;
+    border: 1.3em solid $color-white;
 }
 
 /* ---- Features ---- */
 .featureContainer {
-    @include marginCenter($width-grid-desktop, 0 auto 0 auto);
     display: flex;
     max-width: 1920px;
+    @include marginCenter(
+        $width-grid-desktop,
+        $t-margin:0,
+        $l-margin:auto,
+        $b-margin:0,
+        $r-margin:auto);
 }
 .featureCol {
-    @include marginCenter(25%, 0 .2em 0 .2em);
     flex-direction: row;
     position: relative;
     overflow: hidden;
@@ -197,26 +334,50 @@ h5 {
     :last-child {
         margin-right: 0;
     }
+    :hover .imgContainer h4 {
+        display: none;
+    }
+    @include marginCenter (
+        25%,
+        $t-margin:0,
+        $r-margin:.2em,
+        $b-margin:0,
+        $l-margin:.2em);
 }
 
 /* ---- News ---- */
 .newsSection {
-    @include marginCenter($width-grid-desktop, 8em auto 6em auto);
+    @include marginCenter (
+        $width-grid-desktop,
+        $t-margin:8em,
+        $r-margin:auto,
+        $b-margin:6em,
+        $l-margin:auto);
 }
 
 /* ---- Ad Banner ---- */
 .adBannerSection {
-    @include marginCenter(100%, 0 auto 0 auto);
     height: $height-header + 465px;
     max-width: 1920px;
     background: url(../image/veriu-banner.jpg);
     position: relative;
+    @include marginCenter(
+        100%,
+        $t-margin:0,
+        $r-margin:auto,
+        $b-margin:0,
+        $l-margin:auto);
 }
 
 /* ---- Footer ---- */
 footer {
-    @include marginCenter($width-grid-desktop, 5em auto 0 auto);
     text-align: center;
+    @include marginCenter (
+        $width-grid-desktop,
+        $t-margin:5em,
+        $r-margin:auto,
+        $b-margin:0,
+        $l-margin:auto); 
 }
 
 /* ================================= 
@@ -232,15 +393,17 @@ footer {
     width: 6.875em;
 }
 .containerLogo {
-    @include colHeader(auto, left);
     border-right: $border-white;
     padding: 1.25em 3.125em 0 5em;
+    @include colHeader (
+        $float:left,
+        $height:inherit);
 }
 .containerPhone {
-    @extend %uppercase-white;
-    @include fontHeader(0.875em, 700);
     float: left;
     padding: 2.9em 0 0 3.125em;
+    @extend %uppercase-white;
+    @include fontHeader(0.875em, 700);
 }
 .containerNav {
     display: inline-block;
@@ -266,7 +429,7 @@ footer {
         @include fontHeader(0.875em, 400);
         display: inline-block !important;
         :hover {
-            color: rgba(255, 255, 255, 0.7);
+            color: $color-link-hover;
         }
     }
     input[type=checkbox] {
@@ -280,8 +443,6 @@ footer {
     }
 }
 .dropdownContent {
-    @include position(absolute, 1);
-    @include dropdownContent ($color-grey, none, 1.2em, 15em, .5em, $shadow);
     margin-top: .7em;
     a {
         @include dropdownContent_a (block, left);
@@ -290,6 +451,8 @@ footer {
     a:hover {
         color: $color-orange;
     }
+    @include positionItem(absolute, $z-index:1);
+    @include dropdownContent ($color-grey, none, 1.2em, 15em, .5em, $shadow);
 }
 .toggleInput + label:after {
     @include fontHeader(1em, 900);
@@ -317,9 +480,9 @@ nav {
         @extend %nav-a;
         @include fontHeader(0.875em, 400);
         text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.5);
+        color: $color-link;
         :hover {
-            color: rgba(255, 255, 255, 0.7);
+            color: $color-link-hover;
         }
     }
 }
@@ -332,11 +495,11 @@ nav {
     display: none;
 }
 .slideImg {
-    width: 100%;
+    @include marginCenter(100%);
 }
 .slideContainer {
+    @include positionItem(relative);
     max-width: 100%;
-    position: relative;
     margin: auto;
 }
 .slideCaption {
@@ -345,49 +508,53 @@ nav {
         padding-bottom: 3em;
         letter-spacing: .1em;
     }
-    @include position(absolute);
+    @include positionItem(absolute, $b-position:38%);
     @include marginCenter(100%);
-    top:38%;
     text-align: center;
 }
 .dot {
+    background-color:$color-link;
     cursor: pointer;
     height: 12px;
-    width: 12px;
-    margin: 24px 0;
-    background-color:rgba(255, 255, 255, 0.5);
     border-radius: 50%;
-    display: flex;
-    flex-direction: column;
     transition: background-color 0.6s ease;
-}
-.dot:hover {
-    background-color: rgba(255, 255, 255, 0.7);
+    :hover {
+        background-color: $color-link-hover;
+    }
+    @include marginCenter(
+        12px,
+        $t-margin:24px,
+        $r-margin:0,
+        $b-margin:24px,
+        $l-margin:0);
+    @include display-flex ($f-direction:column);
+
 }
 .activeDot {
-    background-color: #fff;
-    box-shadow: 0 0 10px #f67f21;
+    background-color: $color-white;
+    box-shadow: 0 0 10px $color-orange;
 }
 .verLine {
-    border-right: 1px solid #fff;
-    height: 350px;
-    width: 8px;
+    @include colHeader($width:8px, $height:350px);
+    border-right: $border-white;
 }
 .dotContainer {
-    position: absolute;
-    bottom: 0;
-    right: 11.5%;
+    @include positionItem(
+        absolute,
+        $b-position:0,
+        $r-position:11.5%);
 }
 .prev,
 .next {
     display: none;
-    position: absolute;
     cursor: pointer;
-    top: 50%;
     color: rgba(255, 255, 255, 0.2);
-    font-size: 2em;
     transition: 0.6s ease;
     user-select: none;
+    @include positionItem (
+        absolute,
+        $t-position:50%);
+    @include fontHeader(2em, 300);   
 }
 .prev {
     padding-left: 2em;
@@ -402,410 +569,441 @@ nav {
 }
 
 /* ---- Button ---- */
-.detailBtn,
-.detailBtnWhite {
-    border-radius: 2em;
-    background-color: transparent;
-    text-align: center;
-    padding: 1.1em 2em;
-    transition: opacity 0.3s ease;
-    font-size: .875em;
-    font-weight: 400;
-}
 .detailBtn {
     border: 1px solid #514445;
-    color: #514445;
+    :hover {
+        opacity: .6;
+    }
+    @include btn (
+        $background:transparent,
+        $color:$color-black,
+        $t-padding:1.1em,
+        $r-padding:2em,
+        $b-padding:1.1em,
+        $l-padding:2em);
+    @include fontHeader(.875em, 400);
+    @extend %animation;
 }
 .detailBtnWhite {
     border: 1px solid #fff;
-    color: #fff;
-}
-.detailBtnWhite:hover,
-.detailBtn:hover {
-    opacity: .6;
+    :hover {
+        opacity: .6;
+    }
+    @include btn (
+        $background:transparent,
+        $color:$color-white,
+        $t-padding:1.1em,
+        $r-padding:2em,
+        $b-padding:1.1em,
+        $l-padding:2em);
+    @include fontHeader(.875em, 400);
+    @extend %animation;
 }
 .btn {
-    border-radius: 2em;
-    background-color: #fff;
-    text-align: center;
-    padding: 1.1em 2.2em;
-    color: #514445;
-    transition: background-color 0.3s ease;    
+    transition: background-color 0.3s ease;  
+    :hover {
+        background-color:#d6d6d6;
+    }  
+    @include btn (
+        $background:$color-white,
+        $color:$color-black,
+        $t-padding:1.1em,
+        $r-padding:2.2em,
+        $b-padding:1.1em,
+        $l-padding:2.2em);
 }
-.btn:hover {
-    background-color:#d6d6d6;
-}
-.btnBook i {
-    margin-right: .7em;
-    color: #f67f21;
-}
-.btnBook:hover {
-    opacity: .6;
+.btnBook {
+    @extend %uppercase-white;
+    i {
+        margin-right: .7em;
+        color: $color-orange;
+    }
+    :hover {
+        opacity: .6; 
+    }
 }
 .submitBtn {
     cursor: pointer;
-    background-color: #f67f21;
-    color: #fff;
-    font-size: 1em;
-    font-weight: 400;
-    text-transform: uppercase;
-    line-height: 1.4em;
     border: none;
     height: 150px;
-    width: 230px;
-    margin: auto;
-    position: absolute;
-    right: 0;
-    transition: opacity 0.3s ease;
-}
-.submitBtn:hover {
-    opacity: .9;
-}
-.submitBtn:focus {
-    outline: 0;
+    :hover {
+        opacity: .9;
+    }
+    :focus {
+        outline: 0;
+    }
+    @include btn (
+        $background:$color-orange,
+        $color:$color-white,
+        $t-padding:1.1em,
+        $r-padding:2.2em,
+        $b-padding:1.1em,
+        $l-padding:2.2em);
+    @include fontHeader(1em, 400, $line-height:1.4em);
+    @include marginCenter(230px, $t-margin:0, $r-margin:auto, $b-margin:0, $l-margin:auto);
+    @include positionItem(absolute, $r-position:0);
+    @extend %animation;
 }
 .submitBtnIcon {
-    font-size: 2.7em;
+    @include fontHeader(2.7em, 300);
     opacity: .4;
 }
 .submitBtnText {
     text-align: left;
     display: inline-block;
     padding-left: 1em;
+    > p {
+        line-height: 1.5;
+    }
 }
-.submitBtnText > p {
-    line-height: 1.5;
-}
+
 /* ---- Booking Form ---- */
-.checkin label,
-.checkout label {
-    display: block;
-    margin-top: 1em;
+.checkin{
+    @include marginCenter(
+        24.5%,
+        $t-margin:1.7em,
+        $l-margin:1.8em);
+    border-right: $border-grey;
+    label {
+    @extend %form-label;
+    @extend %check-label;
+    }  
 }
-.checkin label,
-.checkout label,
-.location label {
-    color: #f67f21;
-    text-transform: uppercase;
-    line-height: 0;
+.checkout {
+    @include marginCenter(
+        24.5%,
+        $t-margin:1.7em,
+        $l-margin:2.5em);
+    border-right: $border-grey;
+    label {
+    @extend %form-label;
+    @extend %check-label;
+    }
+}
+.location {
+    @include marginCenter(
+        24.5%,
+        $t-margin:1.7em,
+        $l-margin:2.5em);
+    label {
+        @extend %form-label;
+        }
 }
 input[type=text] {
-    border: none;
-    margin-top: 1em;
-    display: inline-block;
-    font-size: 1.5em;
+    color: $color-black;
     font-weight: 300;
-    color: #352c2d;
-    margin-bottom: .6em;
-    max-width: 150px;
+    border: none;
+    display: inline-block;
+    @include input-text (
+        $size:1.5em,
+        $m-width:150px,
+        $b-margin:.6em,
+        $t-margin:1em);
 }
 .datepickerDate {
-    display:block;
-    font-size: 2.5em;
-    font-weight: 700;
+    @include datepicker (
+        $display:block,
+        $size:2.5em,
+        $weight:700);
 }
 .datepickerMonthYear {
-    display:block;
-    font-size: .8em;
-    text-transform: uppercase;
+    @include datepicker (
+        $display:block,
+        $size:.8em,
+        $t-transform:uppercase);
 }
 .datepickerDayName {
-    font-size: .8em;
-    color: #f67f21; 
+    @include datepicker (
+        $size:.8em,
+        $color:$color-orange);
 }
 .whereIcon {
     float: left;
     padding-top: 1rem;
 }
 select {
+    @include marginCenter (
+        15em,
+        $t-margin:0,
+        $r-margin:0,
+        $b-margin:0,
+        $l-margin:0);
+    @extend %uppercase-black;
     cursor: pointer;
     font-size: 0.8125em;
     background: rgba(255, 255, 255, 0);
     border: none;
-    color:#352c2d;
-    width: 15em;
-    text-transform: uppercase;
     outline: none;
-    margin: 0;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;      
-}
-select.selectIcon {
-    background: url(../image/where-icon.png);
-    background-repeat: no-repeat;
-    background-position: 95% 55%;
+    appearance: none; 
+    .selectIcon {
+        background: url(../image/where-icon.png);
+        background-repeat: no-repeat;
+        background-position: 95% 55%;
+    }    
 }
 .containerSelect {
     padding-top: 2.3em;
     padding-left: 2.5em;
 }
-.checkin,
-.checkout,
-.location {
-    width: 24.5%;
-    margin-top: 1.7em;
-}
-.location {
-    margin-left: 2.5em;
-}
-.checkout {
-    border-right: 1px solid rgba(0,0,0,0.2);
-    margin-left: 2.5em;
-}
-.checkin {
-    border-right: 1px solid rgba(0,0,0,0.2);
-    margin-left: 1.8em;
-}
 form {
-    background-color: #fff;
-    box-shadow: 0px 8px 30px 0px rgba(0,0,0,0.2);
+    @include display-flex (
+        $f-direction:row,
+        $align:flex-start,
+        $wrap:wrap);
+    background-color: $color-white;
+    box-shadow: $shadow;
     height: 150px;
-    display: flex;
-	flex-direction: row;
-    align-items: flex-start;
-    flex-wrap: wrap;
 }
 
 /* ---- About ---- */
-.aboutCol > p {
-    line-height: 1.7em;
-    margin-bottom: 1.5em;
-}
-.aboutCol > div > h5 {
-    float: left;
-    margin-top: 0;
-    padding-top: 0;
-}
 .horizonLine {
     height: 1px;
-    border-top:1px solid rgba(0,0,0,0.2);
+    border-top: $border-grey;
     margin-left: 5em;
     margin-top: .3em;
 }
-.aboutCol > div > p {
-    margin-right: 2em;
-}
-
 /* ---- Features ---- */
 .imgContainer {
     position: relative;
-    width: 100%;
-}
-.imgContainer img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-.imgContainer h4 {
-    position: absolute;
-    letter-spacing: .2em;
-    width: 100%;
-    bottom: 15%;
-    left: 50%;
-    transform: translate(-50%, -50%);   
-}
-.imgContainer {
-    position: relative;
     text-align: center;
+    width: 100%;
+    img {
+        @include colHeader(
+            $width:100%,
+            $height:auto);
+        display: block;
+    }
+    h4 {
+        @include positionItem(
+            absolute,
+            $b-position:15%,
+            $l-position:50%);
+        letter-spacing: .2em;
+        width: 100%;
+        transform: translate(-50%, -50%); 
+    }
 }
 .overlayImage {
-    color: #fff;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0; 
-	left: 0;
+    @include positionItem(
+        absolute,
+        $t-position:0%,
+        $r-position:0%,
+        $b-position:0%,
+        $l-position:0%);
+    @include display-flex (
+        $f-direction:column,
+        $align:center,
+        $justify:center);
+    color: $color-white;
 	padding-left: 20px;
 	padding-right: 20px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
     background: rgba(0,0,0, .65);
     opacity: 0;
     transition: .5s;
     text-align: center;
-}
-.overlayImage:hover {
-    opacity: 1;
-}
-.featureCol:hover  .imgContainer h4 {
-    display: none;
-}
-.overlayImage img {
-    height: 80px;
-    opacity: .4;
-}
-.overlayImage h4 {
-    letter-spacing: .2em;
-    margin: 1em 0 2em 0;
-}
-.overlayImage p {
-    width: 80%;
-    margin: 0 auto 4em auto;
+    :hover {
+        opacity: 1;
+    }
+    img {
+        height: 80px;
+        opacity: .4;
+    }
+    h4 {
+        letter-spacing: .2em;
+        margin: 1em 0 2em 0;
+    }
+    p {
+        @include marginCenter(
+            80%,
+            $t-margin:0,
+            $r-margin:auto,
+            $b-margin:4em,
+            $l-margin:auto);
+    }
 }
 
 /* ---- News ---- */
 .newsHeader {
+    @include display-flex (
+        $f-direction:row,
+        $justify:center);
     margin-bottom: 5em;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.leftHorizonLine,
-.rightHorizonLine {
-    height: 1px;
-    border-top:1px solid rgba(0,0,0,0.2);
-    width: 5.15em;
-    margin-top: .3em;
 }
 .leftHorizonLine {
-    margin-right: 1em;
+    @include marginCenter(
+        5.15em,
+        $t-margin:.3em,
+        $r-margin:1em);
+    height: 1px;
+    border-top: $border-grey;
 }
 .rightHorizonLine {
-    margin-left: 1em;
+    @include marginCenter(
+        5.15em,
+        $t-margin:.3em,
+        $l-margin:1em);
+    height: 1px;
+    border-top: $border-grey;
 }
 .newsContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    @include display-flex (
+        $f-direction:row,
+        $justify:center);
 }
 .articleContainer {
     flex-grow: 1;
-    background-color: #f1f1f1;
+    background-color: $color-grey;
     max-width: 370px;
     margin-left: 1.9em;
     transition: box-shadow 0.3s ease;
-}
-.articleContainer:hover {
-    background-color: #fff;
-    box-shadow: -1px 0px 13px 3px rgba(0,0,0,0.21);
-}
-.articleContainer:first-child {
-    margin-left: 0;
+    :hover {
+        background-color: $color-white;
+        box-shadow: -1px 0px 13px 3px rgba(0,0,0,0.21);
+    }
+    :first-child {
+        margin-left: 0;
+    }
 }
 .textContainer {
     padding: 2em 1.5em;
-}
-.textContainer h5 {
-    font-weight: 300;
-    margin-bottom: 1.5em;
-}
-.textContainer a {
-    color: #352c2d;
-    font-size: 1.1em;
-}
-.textContainer a:hover {
-    color: #f67f21; 
+    h5 {
+        font-weight: 300;
+        margin-bottom: 1.5em;
+    }
+    a {
+        color: $color-black;
+        font-size: 1.1em;
+        :hover {
+            color: $color-orange; 
+        }
+    }
 }
 .articleAuthor {
     padding-top: 1em;
     font-weight: 400 !important;
+    span {
+        color: $color-black;
+    }
 }
-.articleAuthor span {
-    color: #352c2d;
-}
+
 /* ---- Ad Banner ---- */
+.bannerAd {
+    color: $color-white;
+}
 .adBannerContainer {
     text-align: center;
 }
 .veriu {
-    position: absolute;
-    bottom: 2.5em;
-    right: 1.3em;
-    z-index: 2;
-    transition: opacity 0.3s ease;
-}
-.veriu:hover {
-    opacity: .5;   
+    @include positionItem(
+        absolute,
+        $r-position:1.3em,
+        $b-position:2.5em,
+        $z-index:2);
+    @extend %animation;
+    :hover {
+        opacity: .5;
+    }
 }
 .veriuBackground {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 300px;
-    height: 300px;
+    @include positionItem (
+        absolute,
+        $r-position:0,
+        $b-position:0,
+        $z-index:1);
+    @include colHeader(
+        $width:300px,
+        $height:300px);
     border-bottom: solid 150px #000000;
     border-right: solid 150px #000000;
     border-left: solid 150px transparent;
     border-top: solid 150px transparent;
-    z-index: 1;
 }
 .adBannerContent {
     padding-top: 4em;
-}
-.adBannerContent p {
-    width: 50%;
-    margin: auto;
-    color: rgba(255, 255, 255, .9);
-    font-size: 1.4em;
-    line-height: 1.6em;
-    padding-top: 1em;
-    padding-bottom: 5em;
+    p {
+        @include marginCenter(
+            50%,
+            $t-margin:.0,
+            $r-margin:auto,
+            $b-margin:0,
+            $l-margin:auto);
+        @include fontHeader(
+            1.4em,
+            300,
+            $line-height:1.6);
+        color: rgba(255, 255, 255, .9);
+        padding-top: 1em;
+        padding-bottom: 5em; 
+    }
 }
 
 /* ---- Footer ---- */
 .socialLink {
     margin-top: 2em;
     margin-bottom: 2em;
+    a {
+        margin-left: 1.2em;
+        color: rgba(0,0,0,0.5);
+        font-size: 1.1em;
+        :hover {
+            color: $color-orange;
+        }
+        :first-child {
+            margin-left: 0;
+        }
+    }
 }
-.socialLink a {
-    margin-left: 1.2em;
-    color: rgba(0,0,0,0.5);
-    font-size: 1.1em;
+.footerNav {
+    li {
+        list-style-type: none;
+        display: inline-block;
+        padding-left: 1.7em;
+        padding-bottom: 1.7em;
+        :first-child {
+            padding-left: 0;
+        }
+        a {
+            @extend %uppercase-black;
+            :hover {
+                color: $color-orange;
+            }
+        }
+    }
 }
-.socialLink a:first-child {
-    margin-left: 0;
-}
-.socialLink a:hover {
-    color: #f67f21;
-}
-.footerNav li a {
-    text-transform: uppercase;
-    color: #352c2d;
-}
-.bottomFooter li a:hover,
-.footerNav li a:hover {
-    color: #f67f21;
-}
-.footerNav li {
-    list-style-type: none;
-    display: inline-block;
-    padding-left: 1.7em;
-    padding-bottom: 1.7em;
-}
-.bottomFooter li:first-child,
-.footerNav li:first-child {
-    padding-left: 0;
+.bottomFooter {
+    span {
+        font-size: .7em;
+        color: $color-dark-grey;
+        padding-bottom: 1em;
+    }
+    ul {
+        padding: 0; 
+    }
+    li {
+        list-style-type: none;
+        display: inline-block;
+        padding-left: 1.7em;
+        :first-child {
+            padding-left: 0;
+        }
+        a {
+            @include fontHeader(.9em, 300);
+            color: $color-black;
+        :hover {
+            color: $color-orange;
+            }
+        }
+    }
 }
 .topFooter {
-    border-bottom:1px solid rgba(0,0,0,0.2);
+    border-bottom: $border-grey;
     margin-bottom: 1em;
 }
 .bottomFooterContainer {
+    @include display-flex (
+        $f-direction:row,
+        $justify:space-between);
     text-align: left;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-}
-.bottomFooter ul {
-    padding: 0;
-}
-.bottomFooter li a {
-    color: #352c2d;
-    font-size: .9em;
-    font-weight: 300;
-}
-.bottomFooter li {
-    list-style-type: none;
-    display: inline-block;
-    padding-left: 1.7em;
-}
-.bottomFooter span {
-    font-size: .7em;
-    color: rgba(0,0,0,0.4);
-    padding-bottom: 1em;
 }
 .newsletterFooter h5 {
     margin-top: 1.5em;
@@ -813,31 +1011,33 @@ form {
     letter-spacing: 0;
 }
 input[type=email] {
+    @include fontHeader(.8em, 300);
     border: 0;
     width: 250px;
-    font-size: .8em;
-    color: rgba(0,0,0,0.4);
+    color: $color-dark-grey;
     font-style: italic;
-    font-weight: 300;
     padding-bottom: .5em;
+    :focus {
+        outline: none;
+    }
 }
 .newsletterContainer {
-    border-bottom: 1px solid #f67f21;
+    border-bottom: 1px solid $color-orange;
+    button {
+        border: 0;
+        cursor: pointer;
+        font-size: 1.2em;
+        color:$color-orange;
+        background: transparent;
+        :focus {
+            outline: none;
+        }
+        :hover {
+            opacity: .6;
+        }
+    }
 }
-.newsletterContainer button {
-    border: 0;
-    cursor: pointer;
-    font-size: 1.2em;
-    color: #f67f21;
-    background: transparent;
-}
-input[type=email]:focus,
-.newsletterContainer button:focus {
-    outline: none;
-}
-.newsletterContainer button:hover {
-    opacity: .6;
-}
+
 /* ---- Clearfix ---- */
 .clearFix::after {
     content: "";
