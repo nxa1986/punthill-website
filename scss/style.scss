@@ -206,6 +206,7 @@ h4 {
 }
 h5 {
     @include fontHeader(0.8125em, 400, 0);
+    text-transform: uppercase;
     color: $color-orange;
     margin: 0;
     letter-spacing: .2em;
@@ -253,18 +254,18 @@ h5 {
     position: relative;
     @include marginCenter(
         $width-grid-desktop,
-        $t-margin:0,
+        $t-margin:auto,
         $l-margin:auto,
-        $b-margin:0,
+        $b-margin:auto,
         $r-margin:auto);
 }
 /* ---- About ---- */
 .aboutSection {
     @include marginCenter (
         $width-grid-desktop,
-        $t-margin:0,
+        $t-margin:auto,
         $l-margin:auto,
-        $b-margin:0,
+        $b-margin:auto,
         $r-margin:auto);
 }
 .aboutContainer {
@@ -281,9 +282,6 @@ h5 {
         float: right;
         text-align: right;
     }
-    .detailBtnContainer {
-        margin-top: 4em;
-    }
     > p {
         line-height: 1.7em;
         margin-bottom: 1.5em;
@@ -299,6 +297,9 @@ h5 {
     @include marginCenter (
         50%,
         $b-margin:10em);
+}
+.detailBtnContainer {
+    margin-top: 4em;
 }
 .aboutImgContainer {
     position: relative;
@@ -318,7 +319,7 @@ h5 {
     display: flex;
     max-width: 1920px;
     @include marginCenter(
-        $width-grid-desktop,
+        100%,
         $t-margin:0,
         $l-margin:auto,
         $b-margin:0,
@@ -350,9 +351,7 @@ h5 {
     @include marginCenter (
         $width-grid-desktop,
         $t-margin:8em,
-        $r-margin:auto,
-        $b-margin:6em,
-        $l-margin:auto);
+        $b-margin:6em);
 }
 
 /* ---- Ad Banner ---- */
@@ -363,9 +362,9 @@ h5 {
     position: relative;
     @include marginCenter(
         100%,
-        $t-margin:0,
+        $t-margin:auto,
         $r-margin:auto,
-        $b-margin:0,
+        $b-margin:auto,
         $l-margin:auto);
 }
 
@@ -374,9 +373,9 @@ footer {
     text-align: center;
     @include marginCenter (
         $width-grid-desktop,
-        $t-margin:5em,
+        $t-margin:auto,
         $r-margin:auto,
-        $b-margin:0,
+        $b-margin:auto,
         $l-margin:auto); 
 }
 
