@@ -152,6 +152,7 @@ h5 {
 }
 
 .aboutCol {
+  float: left;
   padding: 0 2em;
   width: 50%;
   margin-bottom: 10em;
@@ -310,7 +311,7 @@ footer {
 
 .containerBtn {
   display: inline-block;
-  padding-top: 2.5em 5em 0 2.6em;
+  padding: 2.5em 5em 0 2.6em;
 }
 
 .numberPhone {
@@ -372,7 +373,7 @@ footer {
   font-family: "Font Awesome 5 Free";
 }
 
-.toggleInput + label:after :checked {
+.toggleInput:checked + label:after {
   content: '\f106';
 }
 
@@ -581,7 +582,6 @@ nav a :hover {
   height: 150px;
   border-radius: 0;
   background-color: #f67f21;
-  text-align: center;
   text-transform: uppercase;
   color: white;
   padding-top: 1.1em;

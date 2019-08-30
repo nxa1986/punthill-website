@@ -111,9 +111,9 @@ $shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 @mixin btn (
     $b-radius,
-    $background:null,
-    $t-align:center,
     $t-transform:uppercase,
+    $t-align:null,
+    $background:null,
     $color:null,
     $t-padding:null,
     $r-padding:null,
@@ -268,6 +268,7 @@ h5 {
     margin-top: 12em;
 }
 .aboutCol {
+    float:left;
     padding: 0 2em;
     :first-child {
         padding-left: 0;
@@ -409,7 +410,7 @@ footer {
 }
 .containerBtn {
     display: inline-block;
-    padding-top: 2.5em 5em 0 2.6em;
+    padding: 2.5em 5em 0 2.6em;
 }
 .numberPhone {
     @extend %uppercase-white;
@@ -453,9 +454,9 @@ footer {
     content: '\f107';
     padding-left: 0.3em;
     font-family: "Font Awesome 5 Free";
-    :checked {
-        content: '\f106';
-    }
+}
+.toggleInput:checked + label:after {
+    content: '\f106';
 }
 nav {
     ul {
@@ -568,6 +569,7 @@ nav {
     }
     @include btn (
         $b-radius:2em,
+        $t-align:center,
         $background:transparent,
         $color:$color-black,
         $t-padding:1.1em,
@@ -584,6 +586,7 @@ nav {
     }
     @include btn (
         $b-radius:2em,
+        $t-align:center,
         $background:transparent,
         $color:$color-white,
         $t-padding:1.1em,
@@ -600,6 +603,7 @@ nav {
     }  
     @include btn (
         $b-radius:2em,
+        $t-align:center,
         $background:$color-white,
         $color:$color-black,
         $t-padding:1.1em,
