@@ -110,7 +110,7 @@ $shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         text-align: $text-align;
 }
 @mixin btn (
-    $b-radius:2em,
+    $b-radius,
     $background:null,
     $t-align:center,
     $t-transform:uppercase,
@@ -367,7 +367,7 @@ footer {
     text-align: center;
     @include marginCenter (
         $width-grid-desktop,
-        $t-margin:auto,
+        $t-margin:5em,
         $r-margin:auto,
         $b-margin:auto,
         $l-margin:auto); 
@@ -400,7 +400,7 @@ footer {
 }
 .containerNav {
     display: inline-block;
-    padding-top: 2.5em 1.2em 0 0;
+    padding: 2.5em 1.2em 0 0;
     border-right: $border-white;
     height: inherit;
     label {
@@ -521,7 +521,6 @@ nav {
         $b-margin:24px,
         $l-margin:0);
     @include display-flex ($f-direction:column);
-
 }
 .activeDot {
     background-color: $color-white;
@@ -568,6 +567,7 @@ nav {
         opacity: .6;
     }
     @include btn (
+        $b-radius:2em,
         $background:transparent,
         $color:$color-black,
         $t-padding:1.1em,
@@ -583,6 +583,7 @@ nav {
         opacity: .6;
     }
     @include btn (
+        $b-radius:2em,
         $background:transparent,
         $color:$color-white,
         $t-padding:1.1em,
@@ -598,6 +599,7 @@ nav {
         background-color:#d6d6d6;
     }  
     @include btn (
+        $b-radius:2em,
         $background:$color-white,
         $color:$color-black,
         $t-padding:1.1em,
@@ -626,6 +628,7 @@ nav {
         outline: 0;
     }
     @include btn (
+        $b-radius:0,
         $background:$color-orange,
         $color:$color-white,
         $t-padding:1.1em,
