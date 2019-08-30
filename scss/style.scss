@@ -268,13 +268,12 @@ h5 {
     margin-top: 12em;
 }
 .aboutCol {
-    float:left;
     padding: 0 2em;
-    :first-child {
+    &:first-child {
         padding-left: 0;
         float: left;
     }
-    :last-child {
+    &:last-child {
         padding-right: 0;
         float: right;
         text-align: right;
@@ -326,13 +325,13 @@ h5 {
     flex-direction: row;
     position: relative;
     overflow: hidden;
-    :first-child {
+    &:first-child {
         margin-left: 0;
     }
-    :last-child {
+    &:last-child {
         margin-right: 0;
     }
-    :hover .imgContainer h4 {
+    &:hover .imgContainer h4 {
         display: none;
     }
     @include marginCenter (
@@ -422,7 +421,7 @@ footer {
         @extend %uppercase-white;
         @include fontHeader(0.875em, 400);
         display: inline-block !important;
-        :hover {
+        &:hover {
             color: $color-link-hover;
         }
     }
@@ -475,7 +474,7 @@ nav {
         @include fontHeader(0.875em, 400);
         text-transform: uppercase;
         color: $color-link;
-        :hover {
+        &:hover {
             color: $color-link-hover;
         }
     }
@@ -512,7 +511,7 @@ nav {
     height: 12px;
     border-radius: 50%;
     transition: background-color 0.6s ease;
-    :hover {
+    &:hover {
         background-color: $color-link-hover;
     }
     @include marginCenter(
@@ -564,7 +563,7 @@ nav {
 /* ---- Button ---- */
 .detailBtn {
     border: 1px solid #514445;
-    :hover {
+    &:hover {
         opacity: .6;
     }
     @include btn (
@@ -581,7 +580,7 @@ nav {
 }
 .detailBtnWhite {
     border: 1px solid #fff;
-    :hover {
+    &:hover {
         opacity: .6;
     }
     @include btn (
@@ -598,7 +597,7 @@ nav {
 }
 .btn {
     transition: background-color 0.3s ease;  
-    :hover {
+    &:hover {
         background-color:#d6d6d6;
     }  
     @include btn (
@@ -617,7 +616,7 @@ nav {
         margin-right: .7em;
         color: $color-orange;
     }
-    :hover {
+    &:hover {
         opacity: .6; 
     }
 }
@@ -625,10 +624,10 @@ nav {
     cursor: pointer;
     border: none;
     height: 150px;
-    :hover {
+    &:hover {
         opacity: .9;
     }
-    :focus {
+    &:focus {
         outline: 0;
     }
     @include btn (
@@ -801,7 +800,7 @@ form {
     opacity: 0;
     transition: .5s;
     text-align: center;
-    :hover {
+    &:hover {
         opacity: 1;
     }
     img {
@@ -856,11 +855,11 @@ form {
     max-width: 370px;
     margin-left: 1.9em;
     transition: box-shadow 0.3s ease;
-    :hover {
+    &:hover {
         background-color: $color-white;
         box-shadow: -1px 0px 13px 3px rgba(0,0,0,0.21);
     }
-    :first-child {
+    &:first-child {
         margin-left: 0;
     }
 }
@@ -900,7 +899,7 @@ form {
         $b-position:2.5em,
         $z-index:2);
     @extend %animation;
-    :hover {
+    &:hover {
         opacity: .5;
     }
 }
@@ -945,10 +944,10 @@ form {
         margin-left: 1.2em;
         color: rgba(0,0,0,0.5);
         font-size: 1.1em;
-        :hover {
+        &:hover {
             color: $color-orange;
         }
-        :first-child {
+        &:first-child {
             margin-left: 0;
         }
     }
@@ -959,7 +958,7 @@ form {
         display: inline-block;
         padding-left: 1.7em;
         padding-bottom: 1.7em;
-        :first-child {
+        &:first-child {
             padding-left: 0;
         }
         a {
@@ -983,13 +982,13 @@ form {
         list-style-type: none;
         display: inline-block;
         padding-left: 1.7em;
-        :first-child {
+        &:first-child {
             padding-left: 0;
         }
         a {
             @include fontHeader(.9em, 300);
             color: $color-black;
-        :hover {
+        &:hover {
             color: $color-orange;
             }
         }
@@ -1017,7 +1016,7 @@ input[type=email] {
     color: $color-dark-grey;
     font-style: italic;
     padding-bottom: .5em;
-    :focus {
+    &:focus {
         outline: none;
     }
 }
@@ -1029,10 +1028,10 @@ input[type=email] {
         font-size: 1.2em;
         color:$color-orange;
         background: transparent;
-        :focus {
+        &:focus {
             outline: none;
         }
-        :hover {
+        &:hover {
             opacity: .6;
         }
     }

@@ -152,18 +152,17 @@ h5 {
 }
 
 .aboutCol {
-  float: left;
   padding: 0 2em;
   width: 50%;
   margin-bottom: 10em;
 }
 
-.aboutCol :first-child {
+.aboutCol:first-child {
   padding-left: 0;
   float: left;
 }
 
-.aboutCol :last-child {
+.aboutCol:last-child {
   padding-right: 0;
   float: right;
   text-align: right;
@@ -229,15 +228,15 @@ h5 {
   margin-right: 0.2em;
 }
 
-.featureCol :first-child {
+.featureCol:first-child {
   margin-left: 0;
 }
 
-.featureCol :last-child {
+.featureCol:last-child {
   margin-right: 0;
 }
 
-.featureCol :hover .imgContainer h4 {
+.featureCol:hover .imgContainer h4 {
   display: none;
 }
 
@@ -326,7 +325,7 @@ footer {
   display: inline-block !important;
 }
 
-.dropdownNav .navText :hover {
+.dropdownNav .navText:hover {
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -397,7 +396,7 @@ nav a {
   color: rgba(255, 255, 255, 0.5);
 }
 
-nav a :hover {
+nav a:hover {
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -457,7 +456,7 @@ nav a :hover {
   display: flex;
 }
 
-.dot :hover {
+.dot:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
@@ -526,7 +525,7 @@ nav a :hover {
   font-weight: 400;
 }
 
-.detailBtn :hover {
+.detailBtn:hover {
   opacity: .6;
 }
 
@@ -545,7 +544,7 @@ nav a :hover {
   font-weight: 400;
 }
 
-.detailBtnWhite :hover {
+.detailBtnWhite:hover {
   opacity: .6;
 }
 
@@ -563,7 +562,7 @@ nav a :hover {
   padding-left: 2.2em;
 }
 
-.btn :hover {
+.btn:hover {
   background-color: #d6d6d6;
 }
 
@@ -572,7 +571,7 @@ nav a :hover {
   color: #f67f21;
 }
 
-.btnBook :hover {
+.btnBook:hover {
   opacity: .6;
 }
 
@@ -600,11 +599,11 @@ nav a :hover {
   right: 0;
 }
 
-.submitBtn :hover {
+.submitBtn:hover {
   opacity: .9;
 }
 
-.submitBtn :focus {
+.submitBtn:focus {
   outline: 0;
 }
 
@@ -784,7 +783,7 @@ form {
   text-align: center;
 }
 
-.overlayImage :hover {
+.overlayImage:hover {
   opacity: 1;
 }
 
@@ -863,13 +862,13 @@ form {
   transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
 }
 
-.articleContainer :hover {
+.articleContainer:hover {
   background-color: white;
   -webkit-box-shadow: -1px 0px 13px 3px rgba(0, 0, 0, 0.21);
           box-shadow: -1px 0px 13px 3px rgba(0, 0, 0, 0.21);
 }
 
-.articleContainer :first-child {
+.articleContainer:first-child {
   margin-left: 0;
 }
 
@@ -916,7 +915,7 @@ form {
   z-index: 2;
 }
 
-.veriu :hover {
+.veriu:hover {
   opacity: .5;
 }
 
@@ -963,11 +962,11 @@ form {
   font-size: 1.1em;
 }
 
-.socialLink a :hover {
+.socialLink a:hover {
   color: #f67f21;
 }
 
-.socialLink a :first-child {
+.socialLink a:first-child {
   margin-left: 0;
 }
 
@@ -978,7 +977,7 @@ form {
   padding-bottom: 1.7em;
 }
 
-.footerNav li :first-child {
+.footerNav li:first-child {
   padding-left: 0;
 }
 
@@ -1002,7 +1001,7 @@ form {
   padding-left: 1.7em;
 }
 
-.bottomFooter li :first-child {
+.bottomFooter li:first-child {
   padding-left: 0;
 }
 
@@ -1012,7 +1011,7 @@ form {
   color: #352c2d;
 }
 
-.bottomFooter li a :hover {
+.bottomFooter li a:hover {
   color: #f67f21;
 }
 
@@ -1051,7 +1050,7 @@ input[type=email] {
   padding-bottom: .5em;
 }
 
-input[type=email] :focus {
+input[type=email]:focus {
   outline: none;
 }
 
@@ -1067,11 +1066,11 @@ input[type=email] :focus {
   background: transparent;
 }
 
-.newsletterContainer button :focus {
+.newsletterContainer button:focus {
   outline: none;
 }
 
-.newsletterContainer button :hover {
+.newsletterContainer button:hover {
   opacity: .6;
 }
 
