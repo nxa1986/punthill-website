@@ -693,7 +693,7 @@ select {
           appearance: none;
 }
 
-select .selectIcon {
+select.selectIcon {
   background: url(../image/where-icon.png);
   background-repeat: no-repeat;
   background-position: 95% 55%;
@@ -886,7 +886,7 @@ form {
   font-size: 1.1em;
 }
 
-.textContainer a :hover {
+.textContainer a:hover {
   color: #f67f21;
 }
 
@@ -981,7 +981,7 @@ form {
   padding-left: 0;
 }
 
-.footerNav li a :hover {
+.footerNav li a:hover {
   color: #f67f21;
 }
 

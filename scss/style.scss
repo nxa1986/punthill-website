@@ -734,7 +734,7 @@ select {
     border: none;
     outline: none;
     appearance: none; 
-    .selectIcon {
+    &.selectIcon {
         background: url(../image/where-icon.png);
         background-repeat: no-repeat;
         background-position: 95% 55%;
@@ -872,7 +872,7 @@ form {
     a {
         color: $color-black;
         font-size: 1.1em;
-        :hover {
+        &:hover {
             color: $color-orange; 
         }
     }
@@ -963,7 +963,7 @@ form {
         }
         a {
             @extend %uppercase-black;
-            :hover {
+            &:hover {
                 color: $color-orange;
             }
         }
