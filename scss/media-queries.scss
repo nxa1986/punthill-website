@@ -118,10 +118,10 @@
             $min-width:inherit,
             $border-radius:0,
             $box-shadow:none !important);
+        margin-right: -5em;
         flex-direction: column;
         position: static;
         padding-top: 1.5em;
-        height: 60px;
         li {
             padding-bottom: 1.5em;
             padding-top: 0 !important;
