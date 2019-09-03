@@ -1,0 +1,965 @@
+@import "style.scss"; 
+
+/* ================================= 
+1770
+==================================== */
+@media screen and (max-width: 1770px) {
+    .dotContainer {
+        display: none;
+    }
+    .prev,
+    .next {
+        display: block;
+    }
+}
+/* ================================= 
+1595
+==================================== */
+@media screen and (max-width: 1595px) {
+    .containerPhone {
+        display:none;
+    }
+    .bookingForm {
+        bottom: -10%;
+    }
+}
+
+/* ================================= 
+1580
+==================================== */
+@media screen and (max-width: 1580px) {
+    .navHamburger {
+        display: inline-block;
+        cursor: pointer;
+    }
+    .bar1, .bar2, .bar3 {
+        @include marginCenter (
+            35px,
+            $t-margin:6px,
+            $l-margin:0,
+            $b-margin:6px,
+            $r-margin:0);
+        height: 5px;
+        background-color: $color-white;
+        transition: 0.4s;
+      } 
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+    .change .bar2 {opacity: 0;}
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+    .rightHeader {
+        @include display-flex (
+            $f-direction:row-reverse,
+            $display:flex);
+    }
+    .containerNav {
+        padding: 2em 5em 0 3em;
+        border-left: $border-white;
+        li {
+            text-align: right;
+        }
+        label {
+            display: inline-block;
+        }
+    }
+    .containerBtn {
+        padding-right: 3em;
+        padding-left: 0;
+    }
+    .dropdownContent {
+        margin-right: -5em;
+    }
+    .dropdownNav .navText {
+        font-size: 1em;
+        padding-top: 1.2em;
+    }
+    nav a {
+        font-size: 1em;
+    }
+    .navList {
+        background: $color-black;
+        box-shadow: -1px 0px 13px 3px rgba(0,0,0,0.21);
+        @include positionItem (
+            absolute,
+            $t-position:100px,
+            $r-position:0);
+        @include marginCenter (
+            1920px,
+            $r-margin:0);
+        li {
+            padding: 0 5em 1em 0;
+        }
+    }
+    .containerNav {
+        input:checked ~ ul {
+            display: block;
+        }
+        ul {
+            display: none;
+            li {
+            @include display-flex (
+                $f-direction:column);
+            }
+        }
+    }
+    .dropdownContent {
+        @include dropdownContent (
+            $background:rgba(255, 255, 255, 0.2),
+            $display:flex,
+            $padding-left:0,
+            $min-width:inherit,
+            $border-radius:0,
+            $box-shadow:none !important);
+        flex-direction: column;
+        position: static;
+        padding-top: 1.5em;
+        height: 60px;
+        li {
+            padding-bottom: 1.5em;
+            padding-top: 0 !important;
+            margin: 0 !important; 
+        }
+        a {
+            text-transform: capitalize !important;
+            font-size: 1.1em;
+            text-align: right;
+            color: $color-white;
+        }
+        input:checked {
+            height: 60px;
+        }
+    }
+}
+
+/* ================================= 
+1440
+==================================== */
+@media screen and (max-width: 1440px) {
+    .overlayImage {
+        margin-top: -1.5em;
+        h4 {
+            margin: 1em 0 1em 0; 
+        }
+        p {
+            @include marginCenter (
+                85%,
+                $t-margin:0,
+                $l-margin:auto,
+                $b-margin:2em,
+                $r-margin:auto);
+        }
+    }
+}
+
+/* ================================= 
+1366
+==================================== */
+@media screen and (max-width: 1366px) {
+    .overlayImage {
+        h4 {
+       letter-spacing: .1em;
+        }
+        img {
+            height: 60px;
+        }
+    }
+    .img2Container {
+        right: -4em;
+    }
+    .slideCaption {
+        top: 30%;
+    }
+}
+
+/* ================================= 
+1270
+==================================== */
+@media screen and (max-width: 1270px) {
+    body {
+        font-size: .95em;
+    }
+/* --------- Header --------- */
+    .logoHeader {
+        width: 6em;
+    }
+    .containerLogo {
+        padding: .5em 3.125em 0 4em;
+    }
+    .bar1, .bar2, .bar3 {
+        @include colHeader (
+            $width:30px,
+            $height:4px);
+    }
+    .bar2 {
+        margin: 7px 0;
+    }
+    .bar3 {
+        margin: 7px 0;
+   }
+    .containerBtn {
+        padding-top: 2em;
+    }
+    .containerNav {
+        padding-right: 4em;
+        padding-top: 1.4em;
+    }
+    .navBorder {
+        height: 80px;
+    }
+    .navList {
+        top: 80px;
+    }
+    .dropdownContent {
+        a {
+            font-size: 1em;
+        }
+        li {
+            padding-bottom: 1.2em;
+        }
+    }
+    nav {
+        a {
+            font-size: 1em;
+        }
+    }
+    .dropdownNav {
+        .navText {
+            font-size: 1em;
+            padding-top: 1em;
+        }
+    }
+
+/* --------- Slider --------- */
+    h1 {
+        font-size: 3.5em;
+    }
+    h4 {
+        font-size: 1.2em;
+    }
+    .slideCaption {
+        top: 33%;
+    }
+    .btn {
+        font-size: .9em;
+    }
+    .prev,
+    .next {
+        top: 50%;
+    }
+
+/* --------- About --------- */
+    .aboutSection {
+        width: 80%;
+    }
+    h2 {
+        font-size: 2.85em;
+        line-height: 1;
+    }
+    .detailBtn {
+        font-size: .8em;
+    }
+    .aboutImgContainer {
+        img {
+            width: 95%;
+        }
+    }
+    .img2Container {
+        right: -3em;
+    }
+    .img2about {
+        width: 80% !important;
+    }
+    p {
+        font-size: .95em;
+    }
+    .aboutCol {
+        margin-bottom: 6em;
+    }
+
+/* --------- Feature --------- */
+    .overlayImage {
+        p {
+            @include marginCenter (
+                90%,
+                $t-margin:0,
+                $l-margin:auto,
+                $b-margin:2em,
+                $r-margin:auto);
+            font-size: .9em;
+        }
+    }
+    .detailBtn, .detailBtnWhite {
+        font-size: .7em;
+    }
+
+/* --------- News --------- */
+    .newsSection {
+        @include marginCenter (
+                80%,
+                $t-margin:6em,
+                $l-margin:auto,
+                $b-margin:5em,
+                $r-margin:auto);
+        }
+    .newsHeader {
+        margin-bottom: 4em;
+    }
+    .articleContainer {
+        max-width: 320px;
+        margin-left: 1.7em;
+        img {
+            width: 100%;
+        }
+    }
+    h5 {
+        font-size: 0.7em;
+    }
+
+/* --------- Ad Banner --------- */
+    .adBannerContent {
+        p {
+            font-size: 1.3em;
+            width: 70%;
+        }
+    }
+    .adBannerContent {
+        padding-top: 4.5em;
+    }
+
+/* --------- Footer --------- */
+    footer {
+        @include marginCenter (
+                80%,
+                $t-margin:4em);
+    }
+    .topFooter img {
+        width: 200px;
+    }
+}
+/* ================================= 
+1260
+==================================== */
+@media screen and (max-width: 1260px) {
+    body {
+        font-size: .9em;
+    }
+
+/* --------- Booking Form --------- */
+    input[type=text] {
+        @include input-text (
+            $b-margin:1.1em,
+            $t-margin:.3em);
+    }
+    .whereIcon img {
+        width: 20px;
+    }
+    .containerForm {
+        width: 90%;
+    }
+    .checkin {
+        @include marginCenter (
+            23%,
+            $t-margin:2.5em,
+            $l-margin:2em);
+        label {
+            font-size: .85em;
+            display: block;
+            margin-bottom: .5em;
+        }
+    }
+    .checkout {
+        @include marginCenter (
+            23%,
+            $t-margin:2.5em,
+            $l-margin:1.7em);
+        label {
+            font-size: .85em;
+            display: block;
+            margin-bottom: .5em;
+        }
+    }
+    .location {
+        @include marginCenter (
+            23%,
+            $t-margin:1.5em,
+            $l-margin:1.7em);
+        label {
+            font-size: .85em;
+        }
+    }
+    input[type=text] {
+        @include input-text (
+            $size:1.1em,
+            $m-width:230px);
+    }
+    img.ui-datepicker-trigger {
+        margin-top: 0 !important;
+    }
+    form {
+        height: 110px;
+    }
+    .whereIcon {
+        padding-top: .5em;
+        img {
+        width: 25px;
+        }
+    }
+    .submitBtn {
+        @include colHeader (
+            $width:auto,
+            $height:110px);
+        font-size: .9em;
+        padding: 0 2em;
+    }
+    select {
+        min-width: 16em;
+    }
+    .containerSelect {
+        padding-top: 1.3em;
+    }
+    .bookingForm {
+        bottom: -10%;
+    }
+    .fa-check-circle:before {
+        font-size: .95em;
+    }
+
+/* --------- About --------- */
+    h2 {
+        font-size: 2.65em;
+        line-height: 1;
+    }
+    p {
+        font-size: .95em;
+    }
+    .aboutCol {
+        margin-bottom: 12em;
+    }
+    .aboutContainer {
+        margin-top: 10em;
+    }
+
+/* --------- News --------- */
+    .newsSection {
+        margin: 4em auto 5em auto;
+    }
+/* --------- Ad Banner --------- */
+    .veriuBackground {
+        @include colHeader (
+            $width:250px,
+            $height:250px);
+        border-bottom: solid 125px $color-black;
+        border-right: solid 125px $color-black;
+        border-left: solid 125px transparent;
+        border-top: solid 125px transparent;
+    }
+    .veriu {
+        width: 120px;
+    }
+    .adBannerSection {
+        height: 500px;
+    }
+
+/* --------- Footer --------- */
+    footer {
+        width: 80%;
+    }
+}
+
+/* ================================= 
+1150
+==================================== */
+@media screen and (max-width: 1150px) {
+/* --------- Header --------- */
+    .navList {
+        top: 70px;
+    }
+    .containerLogo {
+        padding: .5em 3em 0 3em;
+    }
+    .navBorder {
+        height: 70px;
+    }
+    .containerNav {
+        padding-right: 3em;
+        padding-top: 1.2em;
+    }
+
+/* --------- Slider --------- */
+    h1 {
+        font-size: 3em;
+    }
+    h4 {
+        font-size: 1em;
+    }
+    .slideCaption {
+        top: 38%;
+    }
+    .btn {
+        font-size: .9em;
+    }
+    .prev,
+    .next {
+        top: 50%;
+    }
+
+/* --------- About --------- */
+    .aboutContainer {
+        margin-top: 10em;
+    }
+
+/* --------- Booking Form --------- */
+    .checkin,
+    .checkout {
+        display: block;
+        width: 32%;
+    }
+    .submitBtn {
+        @include marginCenter (
+            100%,
+            $t-margin:1em);
+        position: static;
+        height: auto;
+        padding: 1em 0;
+        line-height: 0;
+    }
+    .submitBtn br {
+        display: none;
+    }
+    .submitBtn i {
+        font-size: 1.5em;
+    }
+    .containerForm {
+        width: 82%;
+    }
+    form {
+        height: 145px;
+    }
+    .bookingForm {
+        bottom: -15%;
+    }
+}
+/* ================================= 
+1110
+==================================== */
+@media screen and (max-width: 1110px) {
+/* --------- Booking Form --------- */
+    .checkin,
+    .checkout {
+        display: block;
+        width: 30%;
+    }
+    input[type=text] {
+        min-width: 200px;
+    }
+}
+/* ================================= 
+980
+==================================== */
+@media screen and (max-width: 980px) {
+/* --------- Booking Form --------- */
+    .checkin,
+    .checkout {
+        display: block;
+        width: 28%;
+    }
+    input[type=text] {
+        min-width: 180px;
+    }
+    .bookingForm {
+        bottom: -20%;
+    }
+
+/* --------- About --------- */
+    .aboutContainer {
+        margin-top: 12em;
+    }
+    .aboutCol {
+        margin-bottom: 5em;
+    }
+
+/* --------- Feature --------- */
+    .overlayImage img {
+        height: 45px;
+    }
+
+/* --------- Footer --------- */
+    footer {
+        width: 80%;
+    }
+    .footerNav {
+        ul {
+        padding-left: 0;
+        font-size: .85em;
+        }
+    }
+    .bottomFooter {
+        ul {
+            font-size: .85em;
+        }
+    }
+}
+/* ================================= 
+880
+==================================== */
+@media screen and (max-width: 880px) {
+/* --------- Slider --------- */
+    .slideCaption {
+        top: 32%;
+    }
+
+/* --------- Booking Form --------- */
+    .checkin,
+    .checkout {
+        display: none;
+    }
+    .bookingForm {
+        bottom: -12%;
+    }
+    form {
+        height: 100px;
+    }
+    .submitBtn {
+        @include positionItem (
+            absolute,
+            $t-position:0);
+        @include colHeader (
+            $width:auto,
+            $height:100px);
+        padding: 0 3em;
+        margin-top: 0;
+    }
+    .location {
+        margin-left: 3em;
+        margin-top: 1em;
+    }
+    select {
+        min-width: 20em;
+        font-size: 1em;
+        margin-top: .5em;
+    }
+/* --------- About --------- */
+    .aboutContainer {
+        margin-top: 10em;
+    }
+    .aboutCol {
+        margin-bottom: 7em;
+        h2 {
+        font-size: 2.3em;
+        }
+        > p:nth-child(3n+1)  {
+            display: none;
+        }
+    }   
+
+/* --------- Feature --------- */
+    .overlayImage {
+        p {
+        display: none;
+        }
+    }
+    .overlayImage {
+        h4 {
+        margin: 1em 0 3em 0;
+        }
+    }
+
+/* --------- News --------- */
+    .newsContainer > div:last-child {
+        display: none;
+    }
+
+/* --------- Footer --------- */
+    footer {
+        width: 80%;
+    }
+    .bottomFooter {
+        li:last-child {
+        padding-left: 0;
+        }
+    }
+}
+/* ================================= 
+850
+==================================== */
+@media screen and (max-width: 850px) {
+/* --------- Feature --------- */
+    .featureContainer {
+        flex-wrap: wrap;
+        width: 80%;
+    }
+    .featureCol {
+        @include marginCenter (
+            50%,
+            $t-margin:0,
+            $l-margin:0,
+            $b-margin:0,
+            $r-margin:0)
+    }
+    .imgContainer {
+        height: 250px;
+    }
+}
+/* ================================= 
+760
+==================================== */
+@media screen and (max-width: 760px) {
+/* --------- Booking Form --------- */
+    .bookingForm {
+        position: static;
+        margin-top: -.35em;
+        background-color: $color-grey;
+    }
+    form {
+        background-color: $color-grey;
+    }
+    .containerForm {
+        width: 100%;
+    }
+    select {
+        min-width: 15em;
+    }
+/* --------- About --------- */
+    .aboutContainer {
+        margin-top: 7em;
+    }
+/* --------- Ad Banner --------- */
+    .veriuBackground {
+        @include colHeader (
+            $width:200px,
+            $height:200px);
+        border-bottom: solid 100px $color-black;
+        border-right: solid 100px $color-black;
+        border-left: solid 100px transparent;
+        border-top: solid 100px transparent;
+    }
+    .veriu {
+        width: 80px;
+    }
+}
+/* ================================= 
+570
+==================================== */
+@media screen and (max-width: 570px) {
+/* --------- Header --------- */
+    .containerBtn {
+        display: none;
+    }
+    .containerNav {
+        border-left: none;
+    }
+/* --------- Slider --------- */
+    .slideCaption {
+        .btn {
+            display: none;
+            }
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    h4 {
+        font-size: .8em;
+    }
+    .slideCaption {
+        top: 48%;
+    }
+    .prev {
+        padding-left: 1.2em;
+    }
+    .next {
+        padding-right: 1.2em;
+    }
+/* --------- Form --------- */
+    .submitBtn {
+        @include colHeader (
+            $width:100%,
+            $height:auto);
+        position: static;
+        padding: 1em 0;
+        margin-top: 1em;
+    }
+    .location {
+        width: 100%;
+    }
+    form {
+        height: 138px;
+    }
+    select {
+        min-width: 27em;
+    }
+/* --------- About --------- */
+    .aboutContainer {
+        margin-top: 5em;
+    }
+    .aboutCol {
+        @include marginCenter (
+            100%,
+            $b-margin:3em);
+        clear: both;
+        padding-right: 0;
+    }
+    .aboutImgContainer {
+        display: none;
+    }
+    .aboutCol {
+        h2 {
+        line-height: 1.3em;
+        }
+    }
+/* --------- Feature --------- */
+    .imgContainer {
+        h4 {
+            font-size: 1em;
+        }
+    }
+/* --------- News --------- */
+    .newsContainer > div:nth-child(2) {
+        display: none;
+    }
+    .articleContainer {
+        max-width: 100%;
+    }
+    .newsHeader {
+        margin-bottom: 2em;
+    }
+
+/* --------- Ad Banner --------- */
+    .adBannerContent p {
+        font-size: 1em;
+        width: 70%;
+    }
+    .adBannerContent {
+        padding-top: 3.5em;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    .adBannerSection {
+        height: 400px;
+    }
+/* --------- Footer --------- */
+    .topFooter img {
+        width: 150px;
+    }
+    .bottomFooterContainer {
+        @include display-flex (
+            $f-direction:column-reverse);
+        text-align: center;
+    }
+    .newsletterContainer {
+        @include marginCenter (
+            60%,
+            $t-margin:auto,
+            $l-margin:auto,
+            $b-margin:auto,
+            $r-margin:auto);
+    }
+    input[type=email] {
+        width: 80%;
+    }
+    .bottomFooter li:last-child {
+        padding-left: 1.7em;
+    }
+    .footerNav li {
+        padding-bottom: 1em;
+    }
+    .bottomFooter ul {
+        margin-bottom: .5em;
+        margin-top: 2em;
+    }
+}
+/* ================================= 
+450
+==================================== */
+@media screen and (max-width: 450px) {
+/* --------- Header --------- */
+    .navHeader {
+        @include positionItem (
+            static,
+            $z-index:3)
+    }
+    .containerLogo {
+        padding: .5em 3em 0 2em;
+        border-right: none;
+    }
+    .containerNav {
+        border-right: none;
+        padding-right: 2em;
+    }
+    .navList {
+        z-index: 3;
+    }
+/* --------- Slider --------- */
+    .slideCaption {
+        top: 40%;
+    }
+    .prev {
+        top: 40%;
+        font-size: 1.3em;
+        padding-left: .5em;
+    }
+    .next {
+        top: 40%;
+        font-size: 1.3em;
+        padding-right: .5em;
+    }
+    select {
+        min-width: 10em;
+    }
+    .location {
+        margin-left: 2em;
+    }
+    .slideCaption {
+        h4 {
+            font-size: .5em;
+            letter-spacing: .1em;
+        }
+    }
+/* --------- Feature --------- */
+    .featureCol {
+        @include colHeader (
+            $width:100%,
+            $height:auto);
+        margin: 0 0 1em 0;
+    }
+/* --------- Ad Banner --------- */
+    .adBannerContainer {
+        img {
+            display: none;
+        }
+    }
+    .veriuBackground {
+        display: none;
+    }
+    .adBannerContent {
+        p {
+        font-size: .8em;
+        width: 70%;
+        }
+    }
+    .adBannerContent {
+        padding-top: 5em;
+    }
+    h1 {
+        font-size: 1.2em;
+        line-height: 1em;
+    }
+    .adBannerSection {
+        height: 400px;
+    }
+/* --------- Footer --------- */
+    .footerNav {
+        display: none;
+    }
+    .bottomFooter ul {
+        font-size: .5em;
+    }
+    .bottomFooter span {
+        font-size: .3em;
+    }
+}

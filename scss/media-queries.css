@@ -1080,4 +1080,917 @@ input[type=email]:focus {
   display: table;
   clear: both;
 }
-/*# sourceMappingURL=style.css.map */
+
+/* ================================= 
+1770
+==================================== */
+@media screen and (max-width: 1770px) {
+  .dotContainer {
+    display: none;
+  }
+  .prev,
+  .next {
+    display: block;
+  }
+}
+
+/* ================================= 
+1595
+==================================== */
+@media screen and (max-width: 1595px) {
+  .containerPhone {
+    display: none;
+  }
+  .bookingForm {
+    bottom: -10%;
+  }
+}
+
+/* ================================= 
+1580
+==================================== */
+@media screen and (max-width: 1580px) {
+  .navHamburger {
+    display: inline-block;
+    cursor: pointer;
+  }
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    margin-top: 6px;
+    margin-left: 0;
+    margin-bottom: 6px;
+    margin-right: 0;
+    height: 5px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  .change .bar2 {
+    opacity: 0;
+  }
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+  .rightHeader {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .containerNav {
+    padding: 2em 5em 0 3em;
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+  }
+  .containerNav li {
+    text-align: right;
+  }
+  .containerNav label {
+    display: inline-block;
+  }
+  .containerBtn {
+    padding-right: 3em;
+    padding-left: 0;
+  }
+  .dropdownContent {
+    margin-right: -5em;
+  }
+  .dropdownNav .navText {
+    font-size: 1em;
+    padding-top: 1.2em;
+  }
+  nav a {
+    font-size: 1em;
+  }
+  .navList {
+    background: #352c2d;
+    -webkit-box-shadow: -1px 0px 13px 3px rgba(0, 0, 0, 0.21);
+            box-shadow: -1px 0px 13px 3px rgba(0, 0, 0, 0.21);
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 1920px;
+    margin-right: 0;
+  }
+  .navList li {
+    padding: 0 5em 1em 0;
+  }
+  .containerNav input:checked ~ ul {
+    display: block;
+  }
+  .containerNav ul {
+    display: none;
+  }
+  .containerNav ul li {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .dropdownContent {
+    background-color: rgba(255, 255, 255, 0.2);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    min-width: inherit;
+    border-radius: 0;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: static;
+    padding-top: 1.5em;
+    height: 60px;
+  }
+  .dropdownContent li {
+    padding-bottom: 1.5em;
+    padding-top: 0 !important;
+    margin: 0 !important;
+  }
+  .dropdownContent a {
+    text-transform: capitalize !important;
+    font-size: 1.1em;
+    text-align: right;
+    color: white;
+  }
+  .dropdownContent input:checked {
+    height: 60px;
+  }
+}
+
+/* ================================= 
+1440
+==================================== */
+@media screen and (max-width: 1440px) {
+  .overlayImage {
+    margin-top: -1.5em;
+  }
+  .overlayImage h4 {
+    margin: 1em 0 1em 0;
+  }
+  .overlayImage p {
+    width: 85%;
+    margin-top: 0;
+    margin-left: auto;
+    margin-bottom: 2em;
+    margin-right: auto;
+  }
+}
+
+/* ================================= 
+1366
+==================================== */
+@media screen and (max-width: 1366px) {
+  .overlayImage h4 {
+    letter-spacing: .1em;
+  }
+  .overlayImage img {
+    height: 60px;
+  }
+  .img2Container {
+    right: -4em;
+  }
+  .slideCaption {
+    top: 30%;
+  }
+}
+
+/* ================================= 
+1270
+==================================== */
+@media screen and (max-width: 1270px) {
+  body {
+    font-size: .95em;
+  }
+  /* --------- Header --------- */
+  .logoHeader {
+    width: 6em;
+  }
+  .containerLogo {
+    padding: .5em 3.125em 0 4em;
+  }
+  .bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 4px;
+  }
+  .bar2 {
+    margin: 7px 0;
+  }
+  .bar3 {
+    margin: 7px 0;
+  }
+  .containerBtn {
+    padding-top: 2em;
+  }
+  .containerNav {
+    padding-right: 4em;
+    padding-top: 1.4em;
+  }
+  .navBorder {
+    height: 80px;
+  }
+  .navList {
+    top: 80px;
+  }
+  .dropdownContent a {
+    font-size: 1em;
+  }
+  .dropdownContent li {
+    padding-bottom: 1.2em;
+  }
+  nav a {
+    font-size: 1em;
+  }
+  .dropdownNav .navText {
+    font-size: 1em;
+    padding-top: 1em;
+  }
+  /* --------- Slider --------- */
+  h1 {
+    font-size: 3.5em;
+  }
+  h4 {
+    font-size: 1.2em;
+  }
+  .slideCaption {
+    top: 33%;
+  }
+  .btn {
+    font-size: .9em;
+  }
+  .prev,
+  .next {
+    top: 50%;
+  }
+  /* --------- About --------- */
+  .aboutSection {
+    width: 80%;
+  }
+  h2 {
+    font-size: 2.85em;
+    line-height: 1;
+  }
+  .detailBtn {
+    font-size: .8em;
+  }
+  .aboutImgContainer img {
+    width: 95%;
+  }
+  .img2Container {
+    right: -3em;
+  }
+  .img2about {
+    width: 80% !important;
+  }
+  p {
+    font-size: .95em;
+  }
+  .aboutCol {
+    margin-bottom: 6em;
+  }
+  /* --------- Feature --------- */
+  .overlayImage p {
+    width: 90%;
+    margin-top: 0;
+    margin-left: auto;
+    margin-bottom: 2em;
+    margin-right: auto;
+    font-size: .9em;
+  }
+  .detailBtn, .detailBtnWhite {
+    font-size: .7em;
+  }
+  /* --------- News --------- */
+  .newsSection {
+    width: 80%;
+    margin-top: 6em;
+    margin-left: auto;
+    margin-bottom: 5em;
+    margin-right: auto;
+  }
+  .newsHeader {
+    margin-bottom: 4em;
+  }
+  .articleContainer {
+    max-width: 320px;
+    margin-left: 1.7em;
+  }
+  .articleContainer img {
+    width: 100%;
+  }
+  h5 {
+    font-size: 0.7em;
+  }
+  /* --------- Ad Banner --------- */
+  .adBannerContent p {
+    font-size: 1.3em;
+    width: 70%;
+  }
+  .adBannerContent {
+    padding-top: 4.5em;
+  }
+  /* --------- Footer --------- */
+  footer {
+    width: 80%;
+    margin-top: 4em;
+  }
+  .topFooter img {
+    width: 200px;
+  }
+}
+
+/* ================================= 
+1260
+==================================== */
+@media screen and (max-width: 1260px) {
+  body {
+    font-size: .9em;
+  }
+  /* --------- Booking Form --------- */
+  input[type=text] {
+    margin-bottom: 1.1em;
+    margin-top: 0.3em;
+  }
+  .whereIcon img {
+    width: 20px;
+  }
+  .containerForm {
+    width: 90%;
+  }
+  .checkin {
+    width: 23%;
+    margin-top: 2.5em;
+    margin-left: 2em;
+  }
+  .checkin label {
+    font-size: .85em;
+    display: block;
+    margin-bottom: .5em;
+  }
+  .checkout {
+    width: 23%;
+    margin-top: 2.5em;
+    margin-left: 1.7em;
+  }
+  .checkout label {
+    font-size: .85em;
+    display: block;
+    margin-bottom: .5em;
+  }
+  .location {
+    width: 23%;
+    margin-top: 1.5em;
+    margin-left: 1.7em;
+  }
+  .location label {
+    font-size: .85em;
+  }
+  input[type=text] {
+    font-size: 1.1em;
+    max-width: 230px;
+  }
+  img.ui-datepicker-trigger {
+    margin-top: 0 !important;
+  }
+  form {
+    height: 110px;
+  }
+  .whereIcon {
+    padding-top: .5em;
+  }
+  .whereIcon img {
+    width: 25px;
+  }
+  .submitBtn {
+    width: auto;
+    height: 110px;
+    font-size: .9em;
+    padding: 0 2em;
+  }
+  select {
+    min-width: 16em;
+  }
+  .containerSelect {
+    padding-top: 1.3em;
+  }
+  .bookingForm {
+    bottom: -10%;
+  }
+  .fa-check-circle:before {
+    font-size: .95em;
+  }
+  /* --------- About --------- */
+  h2 {
+    font-size: 2.65em;
+    line-height: 1;
+  }
+  p {
+    font-size: .95em;
+  }
+  .aboutCol {
+    margin-bottom: 12em;
+  }
+  .aboutContainer {
+    margin-top: 10em;
+  }
+  /* --------- News --------- */
+  .newsSection {
+    margin: 4em auto 5em auto;
+  }
+  /* --------- Ad Banner --------- */
+  .veriuBackground {
+    width: 250px;
+    height: 250px;
+    border-bottom: solid 125px #352c2d;
+    border-right: solid 125px #352c2d;
+    border-left: solid 125px transparent;
+    border-top: solid 125px transparent;
+  }
+  .veriu {
+    width: 120px;
+  }
+  .adBannerSection {
+    height: 500px;
+  }
+  /* --------- Footer --------- */
+  footer {
+    width: 80%;
+  }
+}
+
+/* ================================= 
+1150
+==================================== */
+@media screen and (max-width: 1150px) {
+  /* --------- Header --------- */
+  .navList {
+    top: 70px;
+  }
+  .containerLogo {
+    padding: .5em 3em 0 3em;
+  }
+  .navBorder {
+    height: 70px;
+  }
+  .containerNav {
+    padding-right: 3em;
+    padding-top: 1.2em;
+  }
+  /* --------- Slider --------- */
+  h1 {
+    font-size: 3em;
+  }
+  h4 {
+    font-size: 1em;
+  }
+  .slideCaption {
+    top: 38%;
+  }
+  .btn {
+    font-size: .9em;
+  }
+  .prev,
+  .next {
+    top: 50%;
+  }
+  /* --------- About --------- */
+  .aboutContainer {
+    margin-top: 10em;
+  }
+  /* --------- Booking Form --------- */
+  .checkin,
+  .checkout {
+    display: block;
+    width: 32%;
+  }
+  .submitBtn {
+    width: 100%;
+    margin-top: 1em;
+    position: static;
+    height: auto;
+    padding: 1em 0;
+    line-height: 0;
+  }
+  .submitBtn br {
+    display: none;
+  }
+  .submitBtn i {
+    font-size: 1.5em;
+  }
+  .containerForm {
+    width: 82%;
+  }
+  form {
+    height: 145px;
+  }
+  .bookingForm {
+    bottom: -15%;
+  }
+}
+
+/* ================================= 
+1110
+==================================== */
+@media screen and (max-width: 1110px) {
+  /* --------- Booking Form --------- */
+  .checkin,
+  .checkout {
+    display: block;
+    width: 30%;
+  }
+  input[type=text] {
+    min-width: 200px;
+  }
+}
+
+/* ================================= 
+980
+==================================== */
+@media screen and (max-width: 980px) {
+  /* --------- Booking Form --------- */
+  .checkin,
+  .checkout {
+    display: block;
+    width: 28%;
+  }
+  input[type=text] {
+    min-width: 180px;
+  }
+  .bookingForm {
+    bottom: -20%;
+  }
+  /* --------- About --------- */
+  .aboutContainer {
+    margin-top: 12em;
+  }
+  .aboutCol {
+    margin-bottom: 5em;
+  }
+  /* --------- Feature --------- */
+  .overlayImage img {
+    height: 45px;
+  }
+  /* --------- Footer --------- */
+  footer {
+    width: 80%;
+  }
+  .footerNav ul {
+    padding-left: 0;
+    font-size: .85em;
+  }
+  .bottomFooter ul {
+    font-size: .85em;
+  }
+}
+
+/* ================================= 
+880
+==================================== */
+@media screen and (max-width: 880px) {
+  /* --------- Slider --------- */
+  .slideCaption {
+    top: 32%;
+  }
+  /* --------- Booking Form --------- */
+  .checkin,
+  .checkout {
+    display: none;
+  }
+  .bookingForm {
+    bottom: -12%;
+  }
+  form {
+    height: 100px;
+  }
+  .submitBtn {
+    position: absolute;
+    top: 0;
+    width: auto;
+    height: 100px;
+    padding: 0 3em;
+    margin-top: 0;
+  }
+  .location {
+    margin-left: 3em;
+    margin-top: 1em;
+  }
+  select {
+    min-width: 20em;
+    font-size: 1em;
+    margin-top: .5em;
+  }
+  /* --------- About --------- */
+  .aboutContainer {
+    margin-top: 10em;
+  }
+  .aboutCol {
+    margin-bottom: 7em;
+  }
+  .aboutCol h2 {
+    font-size: 2.3em;
+  }
+  .aboutCol > p:nth-child(3n+1) {
+    display: none;
+  }
+  /* --------- Feature --------- */
+  .overlayImage p {
+    display: none;
+  }
+  .overlayImage h4 {
+    margin: 1em 0 3em 0;
+  }
+  /* --------- News --------- */
+  .newsContainer > div:last-child {
+    display: none;
+  }
+  /* --------- Footer --------- */
+  footer {
+    width: 80%;
+  }
+  .bottomFooter li:last-child {
+    padding-left: 0;
+  }
+}
+
+/* ================================= 
+850
+==================================== */
+@media screen and (max-width: 850px) {
+  /* --------- Feature --------- */
+  .featureContainer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 80%;
+  }
+  .featureCol {
+    width: 50%;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+  .imgContainer {
+    height: 250px;
+  }
+}
+
+/* ================================= 
+760
+==================================== */
+@media screen and (max-width: 760px) {
+  /* --------- Booking Form --------- */
+  .bookingForm {
+    position: static;
+    margin-top: -.35em;
+    background-color: #f1f1f1;
+  }
+  form {
+    background-color: #f1f1f1;
+  }
+  .containerForm {
+    width: 100%;
+  }
+  select {
+    min-width: 15em;
+  }
+  /* --------- About --------- */
+  .aboutContainer {
+    margin-top: 7em;
+  }
+  /* --------- Ad Banner --------- */
+  .veriuBackground {
+    width: 200px;
+    height: 200px;
+    border-bottom: solid 100px #352c2d;
+    border-right: solid 100px #352c2d;
+    border-left: solid 100px transparent;
+    border-top: solid 100px transparent;
+  }
+  .veriu {
+    width: 80px;
+  }
+}
+
+/* ================================= 
+570
+==================================== */
+@media screen and (max-width: 570px) {
+  /* --------- Header --------- */
+  .containerBtn {
+    display: none;
+  }
+  .containerNav {
+    border-left: none;
+  }
+  /* --------- Slider --------- */
+  .slideCaption .btn {
+    display: none;
+  }
+  h1 {
+    font-size: 2.5em;
+  }
+  h4 {
+    font-size: .8em;
+  }
+  .slideCaption {
+    top: 48%;
+  }
+  .prev {
+    padding-left: 1.2em;
+  }
+  .next {
+    padding-right: 1.2em;
+  }
+  /* --------- Form --------- */
+  .submitBtn {
+    width: 100%;
+    height: auto;
+    position: static;
+    padding: 1em 0;
+    margin-top: 1em;
+  }
+  .location {
+    width: 100%;
+  }
+  form {
+    height: 138px;
+  }
+  select {
+    min-width: 27em;
+  }
+  /* --------- About --------- */
+  .aboutContainer {
+    margin-top: 5em;
+  }
+  .aboutCol {
+    width: 100%;
+    margin-bottom: 3em;
+    clear: both;
+    padding-right: 0;
+  }
+  .aboutImgContainer {
+    display: none;
+  }
+  .aboutCol h2 {
+    line-height: 1.3em;
+  }
+  /* --------- Feature --------- */
+  .imgContainer h4 {
+    font-size: 1em;
+  }
+  /* --------- News --------- */
+  .newsContainer > div:nth-child(2) {
+    display: none;
+  }
+  .articleContainer {
+    max-width: 100%;
+  }
+  .newsHeader {
+    margin-bottom: 2em;
+  }
+  /* --------- Ad Banner --------- */
+  .adBannerContent p {
+    font-size: 1em;
+    width: 70%;
+  }
+  .adBannerContent {
+    padding-top: 3.5em;
+  }
+  h1 {
+    font-size: 1.8em;
+  }
+  .adBannerSection {
+    height: 400px;
+  }
+  /* --------- Footer --------- */
+  .topFooter img {
+    width: 150px;
+  }
+  .bottomFooterContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+  }
+  .newsletterContainer {
+    width: 60%;
+    margin-top: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+  }
+  input[type=email] {
+    width: 80%;
+  }
+  .bottomFooter li:last-child {
+    padding-left: 1.7em;
+  }
+  .footerNav li {
+    padding-bottom: 1em;
+  }
+  .bottomFooter ul {
+    margin-bottom: .5em;
+    margin-top: 2em;
+  }
+}
+
+/* ================================= 
+450
+==================================== */
+@media screen and (max-width: 450px) {
+  /* --------- Header --------- */
+  .navHeader {
+    position: static;
+    z-index: 3;
+  }
+  .containerLogo {
+    padding: .5em 3em 0 2em;
+    border-right: none;
+  }
+  .containerNav {
+    border-right: none;
+    padding-right: 2em;
+  }
+  .navList {
+    z-index: 3;
+  }
+  /* --------- Slider --------- */
+  .slideCaption {
+    top: 40%;
+  }
+  .prev {
+    top: 40%;
+    font-size: 1.3em;
+    padding-left: .5em;
+  }
+  .next {
+    top: 40%;
+    font-size: 1.3em;
+    padding-right: .5em;
+  }
+  select {
+    min-width: 10em;
+  }
+  .location {
+    margin-left: 2em;
+  }
+  .slideCaption h4 {
+    font-size: .5em;
+    letter-spacing: .1em;
+  }
+  /* --------- Feature --------- */
+  .featureCol {
+    width: 100%;
+    height: auto;
+    margin: 0 0 1em 0;
+  }
+  /* --------- Ad Banner --------- */
+  .adBannerContainer img {
+    display: none;
+  }
+  .veriuBackground {
+    display: none;
+  }
+  .adBannerContent p {
+    font-size: .8em;
+    width: 70%;
+  }
+  .adBannerContent {
+    padding-top: 5em;
+  }
+  h1 {
+    font-size: 1.2em;
+    line-height: 1em;
+  }
+  .adBannerSection {
+    height: 400px;
+  }
+  /* --------- Footer --------- */
+  .footerNav {
+    display: none;
+  }
+  .bottomFooter ul {
+    font-size: .5em;
+  }
+  .bottomFooter span {
+    font-size: .3em;
+  }
+}
+/*# sourceMappingURL=media-queries.css.map */

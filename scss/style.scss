@@ -445,7 +445,11 @@ footer {
         color: $color-orange;
     }
     @include positionItem(absolute, $z-index:1);
-    @include dropdownContent ($color-grey, none, 1.2em, 15em, .5em, $shadow);
+    @include dropdownContent (
+        $color-grey,
+        none,
+        1.2em, 15em, .5em,
+        $shadow);
 }
 .toggleInput + label:after {
     @include fontHeader(1em, 900);
@@ -650,7 +654,6 @@ nav {
 .submitBtnText {
     text-align: left;
     float: right;
-    display: inline-block;
     padding-left: 1em;
     > p {
         line-height: 1.5;
