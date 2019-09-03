@@ -1162,6 +1162,9 @@ input[type=email]:focus {
   .dropdownContent {
     margin-right: -5em;
   }
+  .dropdownNav {
+    height: 60px;
+  }
   .dropdownNav .navText {
     font-size: 1em;
     padding-top: 1.2em;

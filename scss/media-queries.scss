@@ -74,9 +74,12 @@
     .dropdownContent {
         margin-right: -5em;
     }
-    .dropdownNav .navText {
-        font-size: 1em;
-        padding-top: 1.2em;
+    .dropdownNav {
+        height: 60px;
+        .navText {
+            font-size: 1em;
+            padding-top: 1.2em;
+        }
     }
     nav a {
         font-size: 1em;
