@@ -54,8 +54,7 @@
     }
     .rightHeader {
         @include display-flex (
-            $f-direction:row-reverse,
-            $display:flex);
+            $f-direction:row-reverse);
     }
     .containerNav {
         padding: 2em 5em 0 3em;
